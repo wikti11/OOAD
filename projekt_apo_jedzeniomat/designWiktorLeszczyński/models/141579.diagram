@@ -1,0 +1,39 @@
+format 224
+
+classinstance 129035 class_ref 141195 // Analityk
+  name ""   xyz 93 82 2000 life_line_z 2000
+classinstance 129163 class_ref 141451 // AnalitykKontroler
+  name ""   xyz 277 93 2000 life_line_z 2000
+classinstance 129675 class_ref 141579 // SystemOdmierzaniaCzasu
+  name ""   xyz 455 95 2000 life_line_z 2000
+durationcanvas 129291 classinstance_ref 129035 // :Analityk
+  xyzwh 110 159 2010 11 40
+end
+durationcanvas 129419 classinstance_ref 129163 // :AnalitykKontroler
+  xyzwh 320 159 2010 11 143
+end
+durationcanvas 129803 classinstance_ref 129675 // :SystemOdmierzaniaCzasu
+  xyzwh 520 164 2010 11 25
+end
+durationcanvas 130827 classinstance_ref 129035 // :Analityk
+  xyzwh 110 245 2010 11 25
+end
+msg 129547 synchronous
+  from durationcanvas_ref 129291
+  to durationcanvas_ref 129419
+  yz 159 2015 msg operation_ref 137611 // "przekroczenieCzasuBezczynnosci()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 134 144
+msg 129931 synchronous
+  from durationcanvas_ref 129419
+  to durationcanvas_ref 129803
+  yz 164 2020 msg operation_ref 137227 // "zakonczOdmierzacCzas()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 362 150
+msg 130955 synchronous
+  from durationcanvas_ref 129419
+  to durationcanvas_ref 130827
+  yz 245 2015 msg operation_ref 145035 // "przejscieDoTrybuZwyklego()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 150 231
+end

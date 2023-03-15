@@ -1,0 +1,25 @@
+window_sizes 1920 1017 432 1483 917 54
+
+diagrams
+  active  classdiagram_ref 128005 // domain-model
+    1483 917 168 Custom 1105 349
+end
+show_stereotypes
+selected classview_ref 128005 // domain
+open
+  class_ref 128517 // RejestrProduktow
+  class_ref 128773 // SchowekNaGotowke
+  class_ref 129413 // KomunikatAwaria
+  class_ref 129541 // KomunikatWydanieProduktu
+  class_ref 129669 // KomunikatBlad
+  class_ref 129797 // Moneta
+  class_ref 129925 // Banknot
+  class_ref 131461 // PinDoKarty
+  class_ref 131717 // HasloDoTrybuAutoryzowanego
+  class_ref 132741 // TrybAutoryzowany
+  class_ref 132869 // TrybAwaryjny
+  class_ref 133765 // Produkt
+  class_ref 141829 // Pozycja
+  class_ref 141957 // Cena
+end
+end

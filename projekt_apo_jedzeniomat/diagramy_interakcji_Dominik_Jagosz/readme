@@ -1,0 +1,1 @@
+Folder i plik projektu zamiast "models" oryginalnie nazywał się "moije". Po zmianie nazwy projekt models w folderze models też powinien działać, ale na wszelki wypadek zachowany jest folder moije. Oba projekty powinny mieć po 8 diagramów interakcji.

@@ -1,0 +1,152 @@
+format 224
+
+classinstancecanvas 128040 classinstance_ref 142248 // sysAutoryzacji
+  xyz 3 4 2000 life_line_z 2000
+end
+classinstancecanvas 128168 classinstance_ref 142120 // terminal
+  xyz 337 4 2000 life_line_z 2000
+end
+classinstancecanvas 128680 classinstance_ref 128424 // automat
+  xyz 574 4 2000 life_line_z 2000
+end
+classinstancecanvas 129064 classinstance_ref 142376 // pin
+  xyz 734 4 2000 life_line_z 2000
+end
+fragment 129960 "Alt1"
+  refer sequencediagram_ref 141992 // 1-5-wprowadzeniePinu
+  form "validate: True" xyzwh 60 189 2015 391 183
+end
+classinstancecanvas 132392 classinstance_ref 135464 // platnosc
+  xyz 882 4 2000 life_line_z 2000
+end
+fragment 132776 "Alt2"
+  refer sequencediagram_ref 141992 // 1-5-wprowadzeniePinu
+  form "validate: False" xyzwh 61 391 2020 920 633
+end
+fragment 132904 "Alt2.1"
+  refer sequencediagram_ref 141992 // 1-5-wprowadzeniePinu
+  form "validate: True" xyzwh 80 516 3005 351 219
+end
+fragment 133032 "Alt2.2"
+  refer sequencediagram_ref 141992 // 1-5-wprowadzeniePinu
+  form "validate: False" xyzwh 381 750 2000 575 217
+end
+durationcanvas 128296 classinstance_ref 128040 // sysAutoryzacji:SystemAutoryzacjiPlatnosci
+  xyzwh 108 90 2010 11 84
+end
+durationcanvas 128424 classinstance_ref 128168 // terminal:TerminalNaKarte
+  xyzwh 396 90 2010 11 63
+end
+durationcanvas 128808 classinstance_ref 128680 // automat:Automat
+  xyzwh 615 90 2010 11 184
+end
+durationcanvas 129192 classinstance_ref 129064 // pin:PinDoKarty
+  xyzwh 769 89 2010 11 160
+end
+durationcanvas 129704 classinstance_ref 128168 // terminal:TerminalNaKarte
+  xyzwh 396 135 2010 11 364
+end
+durationcanvas 130344 classinstance_ref 128040 // sysAutoryzacji:SystemAutoryzacjiPlatnosci
+  xyzwh 108 249 2010 11 98
+end
+durationcanvas 130856 classinstance_ref 128680 // automat:Automat
+  xyzwh 615 466 2010 11 162
+end
+durationcanvas 131112 classinstance_ref 129064 // pin:PinDoKarty
+  xyzwh 769 505 2010 11 94
+end
+durationcanvas 131624 classinstance_ref 128168 // terminal:TerminalNaKarte
+  xyzwh 396 570 2010 11 88
+end
+durationcanvas 131880 classinstance_ref 128040 // sysAutoryzacji:SystemAutoryzacjiPlatnosci
+  xyzwh 108 575 2010 11 103
+end
+durationcanvas 132136 classinstance_ref 128680 // automat:Automat
+  xyzwh 615 828 2010 11 118
+  overlappingdurationcanvas 133288
+    xyzwh 621 834 2020 11 36
+  end
+end
+durationcanvas 132520 classinstance_ref 132392 // platnosc:Platnosc
+  xyzwh 925 851 2010 11 49
+end
+durationcanvas 133160 classinstance_ref 128168 // terminal:TerminalNaKarte
+  xyzwh 396 833 2010 11 40
+end
+msg 128552 synchronous
+  from durationcanvas_ref 128296
+  to durationcanvas_ref 128424
+  yz 90 2015 explicitmsg "1: getPin()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 208 78
+msg 128936 synchronous
+  from durationcanvas_ref 128424
+  to durationcanvas_ref 128808
+  yz 112 2015 explicitmsg "2: komunikatWprowadzPin()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 436 98
+msg 129320 synchronous
+  from durationcanvas_ref 128808
+  to durationcanvas_ref 129192
+  yz 90 2020 explicitmsg "3: create()"
+  stereotype "<<create>>" xyz 679 104 3000
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "userInput: int"
+  label_xy 650 76
+msg 129832 synchronous
+  from durationcanvas_ref 129192
+  to durationcanvas_ref 129704
+  yz 148 2015 explicitmsg "4: walidujPin()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "pin: PindoKarty"
+  label_xy 516 138
+msg 130472 synchronous
+  from durationcanvas_ref 129704
+  to durationcanvas_ref 130344
+  yz 258 2015 explicitmsg "5: dokonajPlatnosci()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "suma: int, karta: KartaPlatnicza"
+  label_xy 133 246
+msg 130984 synchronous
+  from durationcanvas_ref 129704
+  to durationcanvas_ref 130856
+  yz 488 2015 explicitmsg "5: komunikatWprowadzPin()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 437 474
+msg 131240 synchronous
+  from durationcanvas_ref 130856
+  to durationcanvas_ref 131112
+  yz 505 2015 explicitmsg "6: create()"
+  stereotype "<<create>>" xyz 677 519 3000
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "userInput: int"
+  label_xy 648 491
+msg 131752 synchronous
+  from durationcanvas_ref 131112
+  to durationcanvas_ref 131624
+  yz 570 2015 explicitmsg "7: walidujPin()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "pin: PinDoKarty"
+  label_xy 516 556
+msg 132008 synchronous
+  from durationcanvas_ref 131624
+  to durationcanvas_ref 131880
+  yz 580 2015 explicitmsg "8: dokonajPlatnosci()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "suma: int, karta: KartaPlatnicza"
+  label_xy 135 566
+msg 132648 synchronous
+  from durationcanvas_ref 132136
+  to durationcanvas_ref 132520
+  yz 851 2015 explicitmsg "9: delete()"
+  stereotype "<<delete>>" xyz 765 865 3000
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "platnosc: Platnosc"
+  label_xy 730 838
+msg 133416 synchronous
+  from durationcanvas_ref 133160
+  to durationcanvas_ref 133288
+  yz 834 2025 explicitmsg "8: komunikatWprowadzPin()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 450 821
+end

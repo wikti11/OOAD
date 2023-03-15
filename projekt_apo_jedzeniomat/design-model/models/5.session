@@ -1,0 +1,16 @@
+window_sizes 1920 1017 432 1483 916 55
+
+diagrams
+  classdiagram_ref 148235 // design-model
+    1483 916 100 Custom 213 456
+  classdiagram_ref 128005 // domain-model
+    1483 916 100 Custom 333 0
+  active  statediagram_ref 134533 // zakup produktu
+    1483 916 100 Custom 0 0
+end
+show_stereotypes
+selected pseudostate_ref 134917 // final 
+open
+  state_ref 134533 // diagram stanow
+end
+end

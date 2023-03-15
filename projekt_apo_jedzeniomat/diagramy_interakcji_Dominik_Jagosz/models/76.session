@@ -1,0 +1,33 @@
+window_sizes 1396 585 407 984 435 104
+
+diagrams
+  sequencediagram_ref 128076 // 2-1-otwarcieDrzwiczekAutomatu
+    1206 580 100 A4 0 0
+  collaborationdiagram_ref 128204 // 2-6-przekroczenieCzasuOtwarciaDrzwiczek
+    1206 580 100 D 0 0
+  sequencediagram_ref 134732 // 2-4-zamkniecieDrzwiczekAutomatu
+    1206 580 100 A4 0 0
+  sequencediagram_ref 134860 // 2-5-rozpoznanieBrelokaRFID
+    1206 580 100 A4 0 0
+  collaborationdiagram_ref 141388 // 2-2-uruchomienieProceduryAktualizacjiLiczbyProduktow
+    1206 580 100 E 0 0
+  collaborationdiagram_ref 147916 // 2-3-wprowadzenieLiczbyProduktow
+    1206 580 100 E 0 0
+  collaborationdiagram_ref 154444 // 2-7-przekroczenieCzasuPodaniaLiczbyProduktow
+    1206 580 100 D 0 0
+  active  collaborationdiagram_ref 160972 // 2-8-zakonczenieWprowadzaniaLiczbyProduktow
+    984 435 100 E 0 0
+end
+show_stereotypes
+selected collaborationdiagram_ref 160972 // 2-8-zakonczenieWprowadzaniaLiczbyProduktow
+open
+  class_ref 128204 // PrzygotowanieDoPracyController
+  class_ref 128332 // zegarOtwarciaDrzwiczek
+  class_ref 128588 // SystemDzwiekowy
+  class_ref 135372 // SystemKomunikatow
+  class_ref 135500 // WyswietlaczKomunikatow
+  class_ref 142284 // DrzwiczkiAutomatu
+  class_ref 148812 // RejestrProduktow
+  class_ref 148940 // zegarPodaniaLiczbyProduktow
+end
+end

@@ -1,0 +1,27 @@
+window_sizes 1364 575 450 909 425 104
+
+diagrams
+  sequencediagram_ref 134539 // 3-1-wyborTrybuAutoryzowanego
+    114 86 100 Custom 0 0
+  sequencediagram_ref 141323 // 3-4-wyjscieZTrybuAutoryzowanego
+    114 86 100 Custom 0 0
+  sequencediagram_ref 141451 // 3-5-potwierdzenieSkopiowaniaDanych
+    114 86 100 Custom 0 0
+  sequencediagram_ref 141579 // 3-6-przekroczenieCzasuBezczynnosci
+    114 86 100 Custom 0 0
+  active  sequencediagram_ref 141707 // 3-7-restartSystemu
+    1465 714 100 Custom 0 0
+end
+show_stereotypes
+selected sequencediagram_ref 141707 // 3-7-restartSystemu
+open
+  classinstance_ref 128523 // 
+  class_ref 141067 // Log
+  class_ref 141195 // Analityk
+  class_ref 141451 // AnalitykKontroler
+  class_ref 141579 // SystemOdmierzaniaCzasu
+  class_ref 141707 // TrybAutoryzowany
+  class_ref 148235 // KopiaDanychSprzedazy
+  class_ref 148363 // TrybZwykly
+end
+end

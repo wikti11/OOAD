@@ -1,0 +1,24 @@
+window_sizes 1920 864 301 1614 714 104
+
+diagrams
+  sequencediagram_ref 141323 // 1-4-wyjscieZTrybuAutoryzowanego
+    114 86 100 Custom 0 0
+  sequencediagram_ref 141451 // 1-5-potwierdzenieSkopiowaniaDanych
+    114 86 100 Custom 0 0
+  sequencediagram_ref 141579 // 1-6-przekroczenieCzasuBezczynnosci
+    114 86 100 Custom 0 0
+  sequencediagram_ref 134539 // 1-1-wyborTrybuAutoryzowanego
+    1172 693 100 Custom 0 0
+  sequencediagram_ref 141707 // 1-7-restartSystemu
+    1172 693 137 Custom 0 0
+  active  classdiagram_ref 148235 // design-model
+    1614 758 100 Custom 219 16
+  classdiagram_ref 128005 // domain-model
+    1614 867 57 Custom 0 0
+end
+show_stereotypes
+selected classdiagram_ref 148235 // design-model
+open
+  classview_ref 141067 // design-model
+end
+end

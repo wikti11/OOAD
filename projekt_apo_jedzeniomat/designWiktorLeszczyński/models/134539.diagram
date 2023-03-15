@@ -1,0 +1,30 @@
+format 224
+
+classinstance 132363 class_ref 141195 // Analityk
+  name ""   xyz 41 81 2000 life_line_z 2000
+classinstance 135307 class_ref 141451 // AnalitykKontroler
+  name ""   xyz 193 77 2000 life_line_z 2000
+classinstance 136075 class_ref 141579 // SystemOdmierzaniaCzasu
+  name ""   xyz 361 75 2000 life_line_z 2000
+durationcanvas 135435 classinstance_ref 132363 // :Analityk
+  xyzwh 58 149 2010 11 67
+end
+durationcanvas 135563 classinstance_ref 135307 // :AnalitykKontroler
+  xyzwh 236 149 2010 11 53
+end
+durationcanvas 136203 classinstance_ref 136075 // :SystemOdmierzaniaCzasu
+  xyzwh 426 157 2010 11 25
+end
+msg 135691 synchronous
+  from durationcanvas_ref 135435
+  to durationcanvas_ref 135563
+  yz 150 2015 msg operation_ref 129675 // "wyborTrybuAutoryzowanego()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 76 136
+msg 136331 synchronous
+  from durationcanvas_ref 135563
+  to durationcanvas_ref 136203
+  yz 158 2015 msg operation_ref 130059 // "rozpocznijOdmierzacCzas()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 269 144
+end

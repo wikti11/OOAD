@@ -1,0 +1,33 @@
+format 224
+
+classinstancecanvas 128204 classinstance_ref 128076 // 
+  drawing_mode actor  xyz 90 18 2000 life_line_z 2000
+end
+classinstancecanvas 128588 classinstance_ref 128204 // 
+  xyz 212 13 2005 life_line_z 2000
+end
+classinstancecanvas 129100 classinstance_ref 128332 // 
+  xyz 479 8 2010 life_line_z 2000
+end
+durationcanvas 128716 classinstance_ref 128204 // :;
+  xyzwh 96 89 2010 11 52
+end
+durationcanvas 128844 classinstance_ref 128588 // :PrzygotowanieDoPracyController
+  xyzwh 294 96 2010 11 81
+end
+durationcanvas 129228 classinstance_ref 129100 // :zegarOtwarciaDrzwiczek
+  xyzwh 539 158 2010 11 62
+end
+msg 128972 synchronous
+  from durationcanvas_ref 128716
+  to durationcanvas_ref 128844
+  yz 96 2015 msg operation_ref 141772 // "obsluzZamkniecieDrzwiczek()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 121 81
+msg 129356 synchronous
+  from durationcanvas_ref 128844
+  to durationcanvas_ref 129228
+  yz 158 2015 msg operation_ref 141900 // "przestanOdliczacCzasOtwarciaDrzwiczek()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 308 144
+end

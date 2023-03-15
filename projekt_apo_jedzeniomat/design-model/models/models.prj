@@ -1,0 +1,3291 @@
+format 224
+"models"
+  revision 18
+  modified_by 5 "s464912"
+
+
+  
+  // class settings
+  default_attribute_visibility private default_relation_visibility private default_operation_visibility public
+  
+  classdiagramsettings draw_all_relations yes hide_attributes no hide_operations no hide_getset_operations no hide_ports no show_members_full_definition no show_members_visibility no show_members_stereotype no show_members_context no show_members_multiplicity no show_members_initialization no show_attribute_modifiers no member_max_width 127 show_parameter_dir yes show_parameter_name yes package_name_in_tab no class_drawing_mode natural drawing_language uml show_context_mode no auto_label_position yes show_relation_modifiers no show_relation_visibility no show_infonote no shadow yes gradient none show_stereotype_properties no end
+  
+  classcompositediagramsettings auto_label_position yes draw_all_relations yes shadow yes gradient none end
+  
+  usecasediagramsettings package_name_in_tab no show_context_mode no auto_label_position yes draw_all_relations yes class_drawing_mode actor shadow yes gradient none show_stereotype_properties no end
+  
+  sequencediagramsettings show_full_operations_definition no show_class_of_operation no write_horizontally yes instances_drawing_mode natural drawing_language uml draw_all_relations yes shadow yes gradient none show_stereotype_properties no show_class_context_mode no show_msg_context_mode no end
+  
+  collaborationdiagramsettings show_full_operations_definition no show_class_of_operation no show_hierarchical_rank no write_horizontally yes instances_drawing_mode natural drawing_language uml package_name_in_tab no show_class_pack_context_mode no show_msg_context_mode no draw_all_relations yes shadow yes gradient none show_stereotype_properties no end
+  
+  objectdiagramsettings write_horizontally yes package_name_in_tab no show_class_pack_context_mode no auto_label_position yes draw_all_relations yes shadow yes gradient none show_stereotype_properties no end
+  
+  objectcompositediagramsettings auto_label_position yes draw_all_relations yes shadow yes gradient none end
+  
+  componentdiagramsettings package_name_in_tab no show_context_mode no auto_label_position yes draw_all_relations yes shadow yes gradient none
+   draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no end
+  
+  deploymentdiagramsettings package_name_in_tab no show_context_mode no write_horizontally yes auto_label_position yes draw_all_relations yes shadow yes gradient none
+   draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no end
+  
+  statediagramsettings package_name_in_tab no show_context_mode no auto_label_position yes write_label_horizontally yes show_trans_definition no draw_all_relations yes shadow yes gradient none
+   show_activities yes region_horizontally yes drawing_language uml show_stereotype_properties no end
+  
+  activitydiagramsettings package_name_in_tab no show_context_mode no show_opaque_action_definition no auto_label_position yes write_label_horizontally no draw_all_relations yes shadow yes gradient none
+   show_infonote yes drawing_language uml show_stereotype_properties no end
+  
+  class_color yellow duration_color transparent continuation_color gray note_color blue fragment_color transparent subject_color transparent usecase_color yellow package_color transparent component_color green artifact_color green deploymentnode_color gray state_color yellow stateaction_color transparent activity_color transparent activityregion_color transparent activitypartition_color transparent activityaction_color transparent parameterpin_color white generalization_color black 
+  dpi 96
+  font_size 8
+  diagram_format 1920x1080
+
+  image_root_dir ""
+
+
+  mark_for_import
+  
+  classview 128005 "domain"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 128005 "domain-model"
+      classdiagramsettings draw_all_relations no show_members_full_definition yes member_max_width 0 end
+      size 1920x1200
+    end
+
+    class 128005 "Automat"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128005 // <association>
+	relation 128005 ----
+	  a role_name "" private
+	    classrelation_ref 128005 // <association>
+	  b role_name "" private
+	    classrelation_ref 128133 // <association>
+      end
+
+      classrelation 139525 // (ma nalepke)
+	relation 133765 ---- name "ma nalepke"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 139525 // (ma nalepke)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 139653 // (ma nalepke)
+      end
+
+      classrelation 139909 // posiada
+	relation_ref 133893 // posiada
+      end
+
+      operation 128040 "wybórProduktu"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "klawiaturaInput" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 128168 "komunikatWprowadzPin"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 128296 "wybórRodzajuPlatnosci"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "userInput" explicit_type "string"
+	
+	
+	
+	
+	
+      end
+
+      operation 128424 "wprowadzenieGotowki"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "b" type class_ref 129925 // Banknot
+	  param in name "m" type class_ref 129797 // Moneta
+	
+	
+	
+	
+	
+      end
+
+      operation 128552 "wprowadzenieKarty"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "karta" type class_ref 134789 // KartaPlatnicza
+	
+	
+	
+	
+	
+      end
+
+      classrelation 128040 // posiada_ (<unidirectional association>)
+	relation 128040 --->
+	  a role_name "posiada_" multiplicity "1" private
+	    classrelation_ref 128040 // posiada_ (<unidirectional association>)
+	  b multiplicity "1" parent class_ref 128517 // RejestrProduktow
+      end
+
+      classrelation 128168 // przetwarza (<unidirectional association>)
+	relation 128168 --->
+	  a role_name "przetwarza" multiplicity "*" private
+	    classrelation_ref 128168 // przetwarza (<unidirectional association>)
+	  b multiplicity "1" parent class_ref 130565 // Zakup
+      end
+
+      classrelation 128296 // _posiada_ (<unidirectional association>)
+	relation 128296 --->
+	  a role_name "_posiada_" multiplicity "1" private
+	    classrelation_ref 128296 // _posiada_ (<unidirectional association>)
+	  b multiplicity "1" parent class_ref 128901 // TerminalNaKarte
+      end
+
+      classrelation 128424 // zachowujeInformacje (<unidirectional association>)
+	relation 128424 --->
+	  a role_name "zachowujeInformacje" multiplicity "1" private
+	    classrelation_ref 128424 // zachowujeInformacje (<unidirectional association>)
+	  b multiplicity "1" parent class_ref 130821 // Platnosc
+      end
+
+      classrelation 128808 // korzystaZ (<unidirectional association>)
+	relation 128680 --->
+	  a role_name "korzystaZ" multiplicity "1" private
+	    classrelation_ref 128808 // korzystaZ (<unidirectional association>)
+	  b multiplicity "1" parent class_ref 129157 // UrzadzenieRozpoznajaceMonetyIBanknoty
+      end
+    end
+
+    class 128133 "SystemOdmierzaniaCzasu"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128133 // <association>
+	relation_ref 128005 // <association>
+      end
+
+      classrelation 140933 // korzysta
+	relation_ref 134405 // korzysta
+      end
+
+      operation 129931 "rozpocznijOdmierzacCzas"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 128261 "SystemDzwiekowy"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 136325 // kontroluje
+	relation_ref 132101 // kontroluje
+      end
+    end
+
+    class 128389 "PrzestrzenProduktówPrzygotowywanych"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 138885 // uzyskuje dostep
+	relation_ref 133381 // uzyskuje dostep
+      end
+    end
+
+    class 128517 "RejestrProduktow"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135045 // jest w
+	relation_ref 131461 // jest w
+      end
+
+      classrelation 135301 // zawiera
+	relation_ref 131589 // zawiera
+      end
+
+      attribute 128773 "liczbaKazdegoProduktu"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128901 "cenaKazdegoProduktu"
+	private explicit_type "Cena"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129029 "pozycjaKazdegoProduktu"
+	private type class_ref 141829 // Pozycja
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 128680 "znajdzProdukt"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "klawiaturaInput" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 128808 "czyWystarczajacaIlosc"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "p" type class_ref 133765 // Produkt
+	
+	
+	
+	
+	
+      end
+
+      classrelation 128680 // posiadaWiedze (<unidirectional association>)
+	relation 128552 --->
+	  a role_name "posiadaWiedze" multiplicity "*" private
+	    classrelation_ref 128680 // posiadaWiedze (<unidirectional association>)
+	  b multiplicity "1" parent class_ref 133765 // Produkt
+      end
+
+      operation 129356 "zaktualizujLiczbeProduktowNaPozycji"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "pozycja" explicit_type "uint"
+	  param in name "liczba_produktow" explicit_type "uint"
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 128645 "PrzestrzenProduktówGotowych"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 139141 // uzyskuje dostep
+	relation_ref 133509 // uzyskuje dostep
+      end
+    end
+
+    class 128773 "SchowekNaGotowke"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 132229 // trafia do
+	relation_ref 130053 // trafia do
+      end
+
+      classrelation 132485 // trafia do
+	relation_ref 130181 // trafia do
+      end
+    end
+
+    class 128901 "TerminalNaKarte"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 133253 // korzysta
+	relation_ref 130565 // korzysta
+      end
+
+      classrelation 133509 // < komunikuje sie
+	relation_ref 130693 // < komunikuje sie
+      end
+
+      classrelation 133637 // (wymaga)
+	relation 130821 ---- name "wymaga"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 133637 // (wymaga)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 133765 // (wymaga)
+      end
+
+      classrelation 134149 // (wymaga)
+	relation 131077 ---- name "wymaga"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 134149 // (wymaga)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 134277 // (wymaga)
+      end
+
+      operation 129576 "getPin"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 129704 "walidujPin"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "pin" type class_ref 131461 // PinDoKarty
+	
+	
+	
+	
+	
+      end
+
+      operation 129832 "obsluzPlatnoscKarta"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "suma" explicit_type "int"
+	  param in name "karta" type class_ref 134789 // KartaPlatnicza
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 129029 "SystemObslugiSwiatel"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 136069 // kontroluje
+	relation_ref 131973 // kontroluje
+      end
+    end
+
+    class 129157 "UrzadzenieRozpoznajaceMonetyIBanknoty"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 132741 // przechodzi przez
+	relation_ref 130309 // przechodzi przez
+      end
+
+      classrelation 132997 // przechodzi przez
+	relation_ref 130437 // przechodzi przez
+      end
+
+      operation 130472 "rozpoznajNominal"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "b" type class_ref 129925 // Banknot
+	  param in name "m" type class_ref 129797 // Moneta
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 129285 "InstrukcjaObslugi"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 139653 // (ma nalepke)
+	relation_ref 133765 // ma nalepke
+      end
+    end
+
+    class 129413 "KomunikatAwaria"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 136837 // wywoluje
+	relation_ref 132357 // wywoluje
+      end
+
+      attribute 128517 "tresc"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 129541 "KomunikatWydanieProduktu"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 140165 // <association>
+	relation_ref 134021 // <association>
+      end
+
+      classrelation 140421 // wywoluje
+	relation_ref 134149 // wywoluje
+      end
+
+      attribute 128389 "tresc"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 129669 "KomunikatBlad"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 140549 // (wuwoluje)
+	relation 134277 ---- name "wuwoluje"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 140549 // (wuwoluje)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 140677 // (wuwoluje)
+      end
+
+      attribute 128261 "tresc"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 129797 "Moneta"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 131973 // korzysta
+	relation_ref 129925 // korzysta
+      end
+
+      classrelation 132357 // (trafia do)
+	relation 130181 ---- name "trafia do"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 132357 // (trafia do)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 132485 // trafia do
+      end
+
+      classrelation 132869 // (przechodzi przez)
+	relation 130437 ---- name "przechodzi przez"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 132869 // (przechodzi przez)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 132997 // przechodzi przez
+      end
+
+      attribute 136069 "nominal"
+	private type class_ref 141573 // Nominal
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 129925 "Banknot"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 131717 // korzysta
+	relation_ref 129797 // korzysta
+      end
+
+      classrelation 132101 // (trafia do)
+	relation 130053 ---- name "trafia do"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 132101 // (trafia do)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 132229 // trafia do
+      end
+
+      classrelation 132613 // (przechodzi przez)
+	relation 130309 ---- name "przechodzi przez"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 132613 // (przechodzi przez)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 132741 // przechodzi przez
+      end
+
+      attribute 136197 "nominal"
+	private type class_ref 141573 // Nominal
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 130053 "DaneSprzedazy"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 134789 // dopisuje do
+	relation_ref 131333 // dopisuje do
+      end
+
+      classrelation 137093 // tworzona z
+	relation_ref 132485 // tworzona z
+      end
+    end
+
+    class 130181 "KopiowanieDanychSprzedazyDoAnalityka"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 137605 // przeprowadza
+	relation_ref 132741 // przeprowadza
+      end
+
+      classrelation 137733 // (wymaga)
+	relation 132869 ---- name "wymaga"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 137733 // (wymaga)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 137861 // (wymaga)
+      end
+    end
+
+    class 130309 "PrzeslanieDanychOdAnalityka"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 130437 "Autoryzacja"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 134021 // umozliwia
+	relation_ref 130949 // umozliwia
+      end
+    end
+
+    class 130565 "Zakup"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 130437 // przeprowadza
+	relation_ref 129157 // przeprowadza
+      end
+
+      classrelation 130565 // (sklada sie z)
+	relation 129285 ---- name "sklada sie z"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 130565 // (sklada sie z)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 130693 // (sklada sie z)
+      end
+
+      classrelation 130949 // sklada sie z
+	relation_ref 129413 // sklada sie z
+      end
+
+      classrelation 134661 // (dopisuje do)
+	relation 131333 ---- name "dopisuje do"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 134661 // (dopisuje do)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 134789 // dopisuje do
+      end
+
+      classrelation 139269 // (wymaga)
+	relation 133637 ---- name "wymaga"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 139269 // (wymaga)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 139397 // (wymaga)
+      end
+
+      classrelation 140293 // (wywoluje)
+	relation 134149 ---- name "wywoluje"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 140293 // (wywoluje)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 140421 // wywoluje
+      end
+
+      classrelation 140677 // (wuwoluje)
+	relation_ref 134277 // wuwoluje
+      end
+
+      operation 129192 "dodajProdukt"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "p" type class_ref 133765 // Produkt
+	
+	
+	
+	
+	
+      end
+
+      operation 129320 "dodajDoSumy"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "cena" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 129448 "getSumaZakupu"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "p" type class_ref 133765 // Produkt
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 130693 "WyborProduktu"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 130693 // (sklada sie z)
+	relation_ref 129285 // sklada sie z
+      end
+
+      classrelation 134405 // (wymaga)
+	relation 131205 ---- name "wymaga"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 134405 // (wymaga)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 134533 // (wymaga)
+      end
+    end
+
+    class 130821 "Platnosc"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 130821 // (sklada sie z)
+	relation 129413 ---- name "sklada sie z"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 130821 // (sklada sie z)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 130949 // sklada sie z
+      end
+
+      classrelation 131205 // jest
+	relation_ref 129541 // jest
+      end
+
+      classrelation 131461 // jest
+	relation_ref 129669 // jest
+      end
+
+      operation 129960 "delete"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "platnosc" type class_ref 130821 // Platnosc
+	
+	
+	
+	
+	
+      end
+
+      operation 130088 "czyPlatnoscGotowka"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "userInput" explicit_type "string"
+	
+	
+	
+	
+	
+      end
+
+      operation 130216 "create"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "sumaZakupów" explicit_type "int"
+	  param in name "czyGotówka" explicit_type "bool"
+	
+	
+	
+	
+	
+      end
+
+      operation 130344 "dodajKwoteDoSrodkow"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "rozpoznanaKwota" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 130949 "Komunikat"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 131077 "PlatnoscGotowka"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 131333 // (jest)
+	relation 129669 ---- name "jest"
+	  a role_name "" private
+	    classrelation_ref 131333 // (jest)
+	  b role_name "" private
+	    classrelation_ref 131461 // jest
+      end
+
+      classrelation 131589 // (korzysta)
+	relation 129797 ---- name "korzysta"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 131589 // (korzysta)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 131717 // korzysta
+      end
+
+      classrelation 131845 // (korzysta)
+	relation 129925 ---- name "korzysta"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 131845 // (korzysta)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 131973 // korzysta
+      end
+    end
+
+    class 131205 "PlatnoscKarta"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 131077 // (jest)
+	relation 129541 ---- name "jest"
+	  a role_name "" private
+	    classrelation_ref 131077 // (jest)
+	  b role_name "" private
+	    classrelation_ref 131205 // jest
+      end
+
+      classrelation 133125 // (korzysta)
+	relation 130565 ---- name "korzysta"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 133125 // (korzysta)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 133253 // korzysta
+      end
+    end
+
+    class 131333 "Pin"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 131461 "PinDoKarty"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 133765 // (wymaga)
+	relation_ref 130821 // wymaga
+      end
+    end
+
+    class 131589 "KodProduktu"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 131717 "HasloDoTrybuAutoryzowanego"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 138117 // wymaga
+	relation_ref 132997 // wymaga
+      end
+    end
+
+    class 131845 "PozycjaWAutomacie"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 134533 // (wymaga)
+	relation_ref 131205 // wymaga
+      end
+
+      classrelation 134917 // (jest w)
+	relation 131461 ---- name "jest w"
+	  a role_name "" private
+	    classrelation_ref 134917 // (jest w)
+	  b role_name "" private
+	    classrelation_ref 135045 // jest w
+      end
+    end
+
+    class 131973 "KopiaDanychSprzedazy"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 136965 // (tworzona z)
+	relation 132485 ---- name "tworzona z"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 136965 // (tworzona z)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 137093 // tworzona z
+      end
+
+      classrelation 137349 // uzyskuje
+	relation_ref 132613 // uzyskuje
+      end
+
+      classrelation 147461 // (wymaga)
+	relation 140933 ---- name "wymaga"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 147461 // (wymaga)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 147589 // (wymaga)
+      end
+    end
+
+    class 132101 "Usterka"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135429 // (moze wywolac)
+	relation 131717 ---- name "moze wywolac"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 135429 // (moze wywolac)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 135557 // (moze wywolac)
+      end
+
+      classrelation 135685 // (wywoluje przejscie w)
+	relation 131845 ---- name "wywoluje przejscie w"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 135685 // (wywoluje przejscie w)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 135813 // (wywoluje przejscie w)
+      end
+    end
+
+    class 132229 "ZagrozenieZycia"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135557 // (moze wywolac)
+	relation_ref 131717 // moze wywolac
+      end
+    end
+
+    class 132357 "ProtokolKomunikacjiZUslugaNaprawcza"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 136453 // (jest potrzebny do komunikacji z)
+	relation 132229 ---- name "jest potrzebny do komunikacji z"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 136453 // (jest potrzebny do komunikacji z)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 136581 // (jest potrzebny do komunikacji z)
+      end
+    end
+
+    class 132485 "Tryb"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 132613 "TrybZwykly"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 139397 // (wymaga)
+	relation_ref 133637 // wymaga
+      end
+    end
+
+    class 132741 "TrybAutoryzowany"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 137861 // (wymaga)
+	relation_ref 132869 // wymaga
+      end
+
+      classrelation 137989 // (wymaga)
+	relation 132997 ---- name "wymaga"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 137989 // (wymaga)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 138117 // wymaga
+      end
+
+      classrelation 140805 // (korzysta)
+	relation 134405 ---- name "korzysta"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 140805 // (korzysta)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 140933 // korzysta
+      end
+
+      attribute 129157 "czasBezczynnosci"
+	private type class_ref 141701 // Czas
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 147589 // (wymaga)
+	relation_ref 140933 // wymaga
+      end
+    end
+
+    class 132869 "TrybAwaryjny"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135813 // (wywoluje przejscie w)
+	relation_ref 131845 // wywoluje przejscie w
+      end
+
+      classrelation 135941 // (kontroluje)
+	relation 131973 ---- name "kontroluje"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 135941 // (kontroluje)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 136069 // kontroluje
+      end
+
+      classrelation 136197 // (kontroluje)
+	relation 132101 ---- name "kontroluje"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 136197 // (kontroluje)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 136325 // kontroluje
+      end
+
+      classrelation 136709 // (wywoluje)
+	relation 132357 ---- name "wywoluje"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 136709 // (wywoluje)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 136837 // wywoluje
+      end
+
+      attribute 129285 "czasDoPrzyjsciaEkipy"
+	private type class_ref 141701 // Czas
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 132997 "Klient"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 130309 // (przeprowadza)
+	relation 129157 ---- name "przeprowadza"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 130309 // (przeprowadza)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 130437 // przeprowadza
+      end
+
+      classrelation 140037 // <association>
+	relation 134021 ----
+	  a role_name "" private
+	    classrelation_ref 140037 // <association>
+	  b role_name "" private
+	    classrelation_ref 140165 // <association>
+      end
+    end
+
+    class 133125 "PracownikObslugi"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 138245 // (przeprowadza)
+	relation 133125 ---- name "przeprowadza"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 138245 // (przeprowadza)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 138373 // (przeprowadza)
+      end
+
+      classrelation 138501 // (otwiera)
+	relation 133253 ---- name "otwiera"
+	  a role_name "" private
+	    classrelation_ref 138501 // (otwiera)
+	  b role_name "" private
+	    classrelation_ref 138629 // (otwiera)
+      end
+
+      classrelation 138757 // (uzyskuje dostep)
+	relation 133381 ---- name "uzyskuje dostep"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 138757 // (uzyskuje dostep)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 138885 // uzyskuje dostep
+      end
+
+      classrelation 139013 // (uzyskuje dostep)
+	relation 133509 ---- name "uzyskuje dostep"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 139013 // (uzyskuje dostep)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 139141 // uzyskuje dostep
+      end
+    end
+
+    class 133253 "Analityk"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 137221 // (uzyskuje)
+	relation 132613 ---- name "uzyskuje"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 137221 // (uzyskuje)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 137349 // uzyskuje
+      end
+
+      classrelation 137477 // (przeprowadza)
+	relation 132741 ---- name "przeprowadza"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 137477 // (przeprowadza)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 137605 // przeprowadza
+      end
+    end
+
+    class 133381 "UslugaNaprawcza"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 136581 // (jest potrzebny do komunikacji z)
+	relation_ref 132229 // jest potrzebny do komunikacji z
+      end
+    end
+
+    class 133509 "SystemAutoryzacjiPlatnosci"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 133381 // (< komunikuje sie)
+	relation 130693 ---- name "< komunikuje sie"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 133381 // (< komunikuje sie)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 133509 // < komunikuje sie
+      end
+
+      classrelation 133893 // (umozliwia)
+	relation 130949 ---- name "umozliwia"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 133893 // (umozliwia)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 134021 // umozliwia
+      end
+    end
+
+    class 133637 "WlascicielAutomatu"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 139781 // (posiada)
+	relation 133893 ---- name "posiada"
+	  a role_name "" multiplicity "1..*" private
+	    classrelation_ref 139781 // (posiada)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 139909 // posiada
+      end
+    end
+
+    class 133765 "Produkt"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128261 // (jest)
+	relation 128133 ---- name "jest"
+	  a role_name "" private
+	    classrelation_ref 128261 // (jest)
+	  b role_name "" private
+	    classrelation_ref 128389 // (jest)
+      end
+
+      classrelation 128645 // <association>
+	relation_ref 128261 // <association>
+      end
+
+      classrelation 129541 // (jest)
+	relation 128773 ---- name "jest"
+	  a role_name "" private
+	    classrelation_ref 129541 // (jest)
+	  b role_name "" private
+	    classrelation_ref 129669 // (jest)
+      end
+
+      classrelation 135173 // (zawiera)
+	relation 131589 ---- name "zawiera"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 135173 // (zawiera)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 135301 // zawiera
+      end
+
+      attribute 128005 "cena"
+	private explicit_type "Cena"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 128936 "znajdzCene"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "p" type class_ref 133765 // Produkt
+	
+	
+	
+	
+	
+      end
+
+      operation 129064 "czyProduktGotowy"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "p" type class_ref 133765 // Produkt
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 133893 "PrduktPrzygotowywany"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128389 // (jest)
+	relation_ref 128133 // jest
+      end
+
+      classrelation 128773 // (jest)
+	relation 128389 ---- name "jest"
+	  a role_name "" private
+	    classrelation_ref 128773 // (jest)
+	  b role_name "" private
+	    classrelation_ref 128901 // (jest)
+      end
+
+      classrelation 129029 // (jest)
+	relation 128517 ---- name "jest"
+	  a role_name "" private
+	    classrelation_ref 129029 // (jest)
+	  b role_name "" private
+	    classrelation_ref 129157 // (jest)
+      end
+
+      classrelation 147845 // <generalisation>
+	relation 141189 ---|>
+	  a public
+	    classrelation_ref 147845 // <generalisation>
+	  b parent class_ref 133765 // Produkt
+      end
+    end
+
+    class 134021 "CieplyNapoj"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128901 // (jest)
+	relation_ref 128389 // jest
+      end
+    end
+
+    class 134149 "Zupa"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128517 // <association>
+	relation 128261 ----
+	  stereotype "jest typu"
+	  a role_name "" private
+	    classrelation_ref 128517 // <association>
+	  b role_name "" private
+	    classrelation_ref 128645 // <association>
+      end
+
+      classrelation 129157 // (jest)
+	relation_ref 128517 // jest
+      end
+    end
+
+    class 134277 "ProduktGotowy"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 129285 // (jest)
+	relation 128645 ---- name "jest"
+	  a role_name "" private
+	    classrelation_ref 129285 // (jest)
+	  b role_name "" private
+	    classrelation_ref 129413 // (jest)
+      end
+
+      classrelation 129669 // (jest)
+	relation_ref 128773 // jest
+      end
+
+      classrelation 129797 // (jest)
+	relation 128901 ---- name "jest"
+	  a role_name "" private
+	    classrelation_ref 129797 // (jest)
+	  b role_name "" private
+	    classrelation_ref 129925 // (jest)
+      end
+
+      classrelation 130053 // (< zapakowany w)
+	relation 129029 ---- name "< zapakowany w"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 130053 // (< zapakowany w)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 130181 // (< zapakowany w)
+      end
+
+      classrelation 147717 // <generalisation>
+	relation 141061 ---|>
+	  a public
+	    classrelation_ref 147717 // <generalisation>
+	  b parent class_ref 133765 // Produkt
+      end
+    end
+
+    class 134405 "ProduktGotowyWPuszce"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 129413 // (jest)
+	relation_ref 128645 // jest
+      end
+    end
+
+    class 134533 "ProduktGotowyInny"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 129925 // (jest)
+	relation_ref 128901 // jest
+      end
+    end
+
+    class 134661 "OpakowaniueProduktuGotowego"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 130181 // (< zapakowany w)
+	relation_ref 129029 // < zapakowany w
+      end
+    end
+
+    class 134789 "KartaPlatnicza"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 134277 // (wymaga)
+	relation_ref 131077 // wymaga
+      end
+    end
+
+    class 134917 "PrzygotowanieDoPracy"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 138373 // (przeprowadza)
+	relation_ref 133125 // przeprowadza
+      end
+    end
+
+    class 135045 "DrzwiDoPrzestrzenieProduktow"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 138629 // (otwiera)
+	relation_ref 133253 // otwiera
+      end
+    end
+
+    class 141573 "Nominal"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 141701 "Czas"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 155013 // <unidirectional association>
+	relation 148357 --->
+	  a role_name "" private
+	    classrelation_ref 155013 // <unidirectional association>
+	  b parent class_ref 141701 // Czas
+      end
+    end
+
+    class 141829 "Pozycja"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 136325 "nrPolki"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 136453 "nrNaPolce"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 141957 "Cena"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 136581 "zlote"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 136709 "grosze"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+  end
+
+  classview 134539 "design"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    sequencediagram 134539 "1-1-wyborTrybuAutoryzowanego"
+      sequencediagramsettings end
+      overlapping_bars size 1920x1080
+    end
+
+    classinstance 128011 ""
+      type class_ref 131717 // HasloDoTrybuAutoryzowanego
+      attributes
+        end
+      relations
+        end
+    end
+
+    sequencediagram 141067 "1-2-wprowadzenieHasla"
+      sequencediagramsettings end
+      overlapping_bars size 1920x1080
+    end
+
+    classinstance 128267 ""
+      type class_ref 128133 // SystemOdmierzaniaCzasu
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 128523 ""
+      type class_ref 132741 // TrybAutoryzowany
+      attributes
+        end
+      relations
+        end
+    end
+
+    sequencediagram 141195 "1-3-wyborKopiowaniaSposrodOpcji"
+      sequencediagramsettings end
+      overlapping_bars size 1920x1080
+    end
+
+    classinstance 128779 ""
+      type class_ref 131973 // KopiaDanychSprzedazy
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 128907 ""
+      type class_ref 130053 // DaneSprzedazy
+      attributes
+        end
+      relations
+        end
+    end
+
+    sequencediagram 141323 "1-4-wyjscieZTrybuAutoryzowanego"
+      sequencediagramsettings end
+      overlapping_bars size 1920x1080
+    end
+
+    classinstance 129163 ""
+      type class_ref 132613 // TrybZwykly
+      attributes
+        end
+      relations
+        end
+    end
+
+    sequencediagram 141451 "1-5-potwierdzenieSkopiowaniaDanych"
+      sequencediagramsettings end
+      overlapping_bars size 1920x1080
+    end
+
+    classinstance 129419 ""
+      type class_ref 130053 // DaneSprzedazy
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 129547 ""
+      type class_ref 131973 // KopiaDanychSprzedazy
+      attributes
+        end
+      relations
+        end
+    end
+
+    sequencediagram 141579 "1-6-przekroczenieCzasuBezczynnosci"
+      sequencediagramsettings end
+      overlapping_bars size 1920x1080
+    end
+
+    classinstance 129803 ""
+      type class_ref 132741 // TrybAutoryzowany
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 129931 ""
+      type class_ref 132613 // TrybZwykly
+      attributes
+        end
+      relations
+        end
+    end
+
+    sequencediagram 141707 "1-7-restartSystemu"
+      sequencediagramsettings end
+      overlapping_bars size 1920x1080
+    end
+
+    classinstance 130187 ""
+      type class_ref 132613 // TrybZwykly
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 141067 "Log"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 137995 "przeslijLogiBledow"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 145291 "zapiszLogi"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 128139 // <generalisation>
+	relation 128139 ---|>
+	  a public
+	    classrelation_ref 128139 // <generalisation>
+	  b parent class_ref 141451 // AnalitykKontroler
+      end
+
+      classrelation 128651 // <unidirectional association>
+	relation 128651 --->
+	  a role_name "" private
+	    classrelation_ref 128651 // <unidirectional association>
+	  b parent class_ref 141451 // AnalitykKontroler
+      end
+    end
+
+    class 141195 "Analityk"
+      visibility package stereotype "actor"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 144779 "udanyLoginWiadomosc"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 145035 "przejscieDoTrybuZwyklego"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 141451 "AnalitykKontroler"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 129675 "wyborTrybuAutoryzowanego"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 130187 "wprowadzenieHasla"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 136843 "wyborDanychSprzedazy"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 137099 "wyjscieZTrybuAutoryzowanego"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 137355 "potwierdzenieSkopiowaniaDanych"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 137611 "przekroczenieCzasuBezczynnosci"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 144523 "logowanieNieudane"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 144651 "logowanieUdane"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 144907 "zakonczSesje"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 145163 "restartSystemu"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 145419 "uruchomPonownieAutomat"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 128011 // <generalisation>
+	relation 128011 ---|>
+	  a public
+	    classrelation_ref 128011 // <generalisation>
+	  b parent class_ref 141579 // SystemOdmierzaniaCzasu
+      end
+
+      classrelation 128267 // <generalisation>
+	relation 128267 ---|>
+	  a public
+	    classrelation_ref 128267 // <generalisation>
+	  b parent class_ref 141707 // TrybAutoryzowany
+      end
+
+      classrelation 128395 // <unidirectional association>
+	relation 128395 --->
+	  a role_name "" public
+	    classrelation_ref 128395 // <unidirectional association>
+	  b parent class_ref 154891 // PrzygotowanieDoPracyController
+      end
+
+      classrelation 128779 // (uzywa)
+	relation 128779 ---> name "uzywa"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 128779 // (uzywa)
+	  b multiplicity "1" parent class_ref 141067 // Log
+      end
+
+      classrelation 128907 // (aktywuje)
+	relation 128907 ---> name "aktywuje"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 128907 // (aktywuje)
+	  b multiplicity "1" parent class_ref 141579 // SystemOdmierzaniaCzasu
+      end
+
+      classrelation 135435 // <unidirectional association>
+	relation 135435 --->
+	  a role_name "" private
+	    classrelation_ref 135435 // <unidirectional association>
+	  b parent class_ref 141451 // AnalitykKontroler
+      end
+
+      classrelation 135563 // (pozwala na dostep do)
+	relation 135563 ---> name "pozwala na dostep do"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 135563 // (pozwala na dostep do)
+	  b multiplicity "1" parent class_ref 141707 // TrybAutoryzowany
+      end
+
+      classrelation 135691 // (aktywuje)
+	relation 135691 ---> name "aktywuje"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 135691 // (aktywuje)
+	  b multiplicity "1" parent class_ref 148363 // TrybZwykly
+      end
+
+      classrelation 135819 // 1 (inicjalizuje)
+	relation 135819 ---> name "inicjalizuje"
+	  a role_name "1" private
+	    classrelation_ref 135819 // 1 (inicjalizuje)
+	  b multiplicity "1" parent class_ref 148235 // KopiaDanychSprzedazy
+      end
+    end
+
+    class 141579 "SystemOdmierzaniaCzasu"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 130059 "rozpocznijOdmierzacCzas"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 137227 "zakonczOdmierzacCzas"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 128204 // (informuje)
+	relation 128204 ---> name "informuje"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 128204 // (informuje)
+	  b multiplicity "1" parent class_ref 154891 // PrzygotowanieDoPracyController
+      end
+    end
+
+    class 141707 "TrybAutoryzowany"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 130315 "walidacjaHasla"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 137739 "wyjscieZTrybuAutoryzowanego"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 148235 "KopiaDanychSprzedazy"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 136971 "utworzKopieDanychSprzedazy"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 137483 "aktualizacjaZnacznikaCzasowegoOstatniejKopii"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 148363 "TrybZwykly"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 137867 "przejscieDoTrybuZwyklego"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    state 134533 "diagram stanow"
+      stereotype "machine"
+      statediagram 134533 "zakup produktu"
+	statediagramsettings draw_all_relations no
+	 end
+	size 1920x1080
+      end
+
+      pseudostate 134533 initial ""
+	transition 136453 "<transition>"
+	  on state_ref 134661 // gotowy do pracy
+	  external 
+	end
+      end
+
+      state 134661 "gotowy do pracy"
+	transition 134533 "wydanie produktu"
+	  on state_ref 134789 // tryb sprzedazy
+	  external 
+	end
+      end
+
+      state 134789 "tryb sprzedazy"
+	transition 134661 "wybrano platnosc karta"
+	  on state_ref 135301 // platnosc karta
+	  external 
+	end
+
+	transition 135045 "wybrano platnosc gotowka"
+	  on state_ref 135173 // platnosc gotowka
+	  external 
+	end
+
+	transition 136837 "<transition>"
+	  on state_ref 134661 // gotowy do pracy
+	  external 
+	end
+
+	transition 136965 "[minela 1 minuta bezczynnosci] anulowano"
+	  on state_ref 134661 // gotowy do pracy
+	  external 
+	end
+      end
+
+      state 135173 "platnosc gotowka"
+	transition 135173 "<transition>"
+	  on state_ref 134789 // tryb sprzedazy
+	  external 
+	end
+
+	transition 135301 "anulowano"
+	  on state_ref 134789 // tryb sprzedazy
+	  external 
+	end
+
+	transition 135685 "dokonano platnosci"
+	  on state_ref 135429 // wydanie reszty
+	  external 
+	end
+
+	transition 137221 "[minela 1 minuta bezczynnosci] anulowano"
+	  on state_ref 134661 // gotowy do pracy
+	  external 
+	end
+      end
+
+      state 135301 "platnosc karta"
+	transition 134789 "anulowano"
+	  on state_ref 134789 // tryb sprzedazy
+	  external 
+	end
+
+	transition 134917 "<transition>"
+	  on state_ref 135301 // platnosc karta
+	end
+
+	transition 135429 "dokonano platnosci"
+	  on state_ref 135557 // autoryzacja
+	  external 
+	end
+
+	transition 137093 "[minela 1 minuta bezczynnosci] anulowano"
+	  on state_ref 134661 // gotowy do pracy
+	  external 
+	end
+      end
+
+      state 135429 "wydanie reszty"
+	transition 136197 "odebrano reszte"
+	  on state_ref 135813 // wydanie (przygotowanego) produktu
+	  external 
+	end
+      end
+
+      state 135557 "autoryzacja"
+	transition 135557 "nie powiodla sie"
+	  on state_ref 135301 // platnosc karta
+	  external 
+	end
+
+	transition 136325 "powiodla sie"
+	  on state_ref 135813 // wydanie (przygotowanego) produktu
+	  external 
+	end
+      end
+
+      state 135813 "wydanie (przygotowanego) produktu"
+	transition 136581 "odebrano"
+	  on state_ref 136069 // produkt odebrany
+	  external 
+	end
+
+	transition 136709 "[minela 1 minuta bezczynnosci] zutylizowano"
+	  on state_ref 135941 // produkt zutylizowany
+	  external 
+	end
+      end
+
+      state 135941 "produkt zutylizowany"
+	transition 137349 "<transition>"
+	  on pseudostate_ref 134917 // final 
+	  external 
+	end
+      end
+
+      state 136069 "produkt odebrany"
+	transition 137477 "<transition>"
+	  on pseudostate_ref 135045 // final 
+	  external 
+	end
+      end
+
+      pseudostate 134917 final ""
+      end
+
+      pseudostate 135045 final ""
+      end
+
+    end
+  end
+
+  classview 141067 "design-model"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 148235 "design-model"
+      classdiagramsettings draw_all_relations no member_max_width 0 end
+      size 1920x1080
+    end
+
+    class 154891 "PrzygotowanieDoPracyController"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 151947 "obsluzOtwarcieDrzwiczek"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 152075 "obsluzPrzekroczenieCzasuOtwarciaDrzwiczek"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 152203 "obsluzZamkniecieDrzwiczek"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 128523 // <unidirectional association>
+	relation 128523 --->
+	  a role_name "" private
+	    classrelation_ref 128523 // <unidirectional association>
+	  b parent class_ref 141451 // AnalitykKontroler
+      end
+
+      classrelation 128076 // (aktywuje)
+	relation 128076 ---> name "aktywuje"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 128076 // (aktywuje)
+	  b multiplicity "1" parent class_ref 141579 // SystemOdmierzaniaCzasu
+      end
+
+      classrelation 128332 // <unidirectional association>
+	relation 128332 --->
+	  a role_name "" private
+	    classrelation_ref 128332 // <unidirectional association>
+	  b parent class_ref 149125 // MenadzerKomunikatowUsterkowych
+      end
+
+      classrelation 128460 // (uzywa)
+	relation 128460 ---> name "uzywa"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 128460 // (uzywa)
+	  b multiplicity "1" parent class_ref 128076 // MenadzerKomunikatowPrzygotowaniaDoPracy
+      end
+
+      classrelation 128716 // <unidirectional association>
+	relation 128716 --->
+	  a role_name "" private
+	    classrelation_ref 128716 // <unidirectional association>
+	  b parent class_ref 128261 // SystemDzwiekowy
+      end
+
+      classrelation 128844 // (uzywa)
+	relation 128844 ---> name "uzywa"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 128844 // (uzywa)
+	  b multiplicity "1" parent class_ref 128204 // SystemDzwiekowy
+      end
+
+      operation 128332 "obsluzRozpoznanieBrelokaRFID"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 129228 // (kontroluje)
+	relation 129228 ---> name "kontroluje"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 129228 // (kontroluje)
+	  b multiplicity "1" parent class_ref 128460 // DrzwiczkiAutomatu
+      end
+
+      operation 128588 "obsuzPrzekroczenieCzasuPodaniaLiczbyProduktow"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 128716 "wprowadzLiczbeProduktow"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "pozycja" explicit_type "uint"
+	  param in name "liczba_produktow" explicit_type "uint"
+	
+	
+	
+	
+	
+      end
+
+      operation 128844 "zapiszLiczbeProduktowNaPozycji"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "pozycja" explicit_type "uint"
+	  param in name "liczba_produktow" explicit_type "uint"
+	
+	
+	
+	
+	
+      end
+
+      operation 128972 "uruchomProcedureAktualizacjiLiczbyProduktow"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 129100 "zapytajOLiczbeProduktowNaPozycjach"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 129228 "zakonczWprowadzanieLiczbyProduktow"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 129356 // (informuje)
+	relation 129356 ---> name "informuje"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 129356 // (informuje)
+	  b multiplicity "1" parent class_ref 128517 // RejestrProduktow
+      end
+
+      classrelation 162053 // <generalisation>
+	relation 155397 ---|>
+	  a public
+	    classrelation_ref 162053 // <generalisation>
+	  b parent class_ref 156037 // MenadzerKomunikatow
+      end
+
+      classrelation 170501 // <realization>
+	relation 163845 -_-|>
+	  a public
+	    classrelation_ref 170501 // <realization>
+	  b parent class_ref 169093 // Obserwator
+      end
+
+      classrelation 170629 // (korzysta)
+	relation 163973 ---> name "korzysta"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 170629 // (korzysta)
+	  b multiplicity "1" parent class_ref 128076 // MenadzerKomunikatowPrzygotowaniaDoPracy
+      end
+    end
+
+    class 148485 "InterpretatorDanych"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 134533 "zinterpretujDane"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "dane" explicit_type "Dane"
+	
+	
+	
+	
+	
+      end
+
+      classrelation 154373 // (potrzebuje)
+	relation 147717 ---> name "potrzebuje"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 154373 // (potrzebuje)
+	  b multiplicity "1" parent class_ref 149509 // DaneOUsterce
+      end
+
+      classrelation 154501 // (przekazuje)
+	relation 147845 ---> name "przekazuje"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 154501 // (przekazuje)
+	  b multiplicity "1" parent class_ref 132101 // Usterka
+      end
+    end
+
+    class 148613 "KreatorStrategiiUsterkowych"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 134661 "stworzStrategie"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "usterka" type class_ref 132101 // Usterka
+	
+	
+	
+	
+	
+      end
+
+      classrelation 154629 // (potrzebuje)
+	relation 147973 ---> name "potrzebuje"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 154629 // (potrzebuje)
+	  b multiplicity "1" parent class_ref 132101 // Usterka
+      end
+
+      classrelation 154757 // (przekazuje)
+	relation 148101 ---> name "przekazuje"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 154757 // (przekazuje)
+	  b multiplicity "1" parent class_ref 149253 // Strategia
+      end
+    end
+
+    class 148741 "MenadzerStrategiiUsterkowych"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 134789 "wykonajStrategie"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "strategia" explicit_type "Strategia"
+	
+	
+	
+	
+	
+      end
+
+      classrelation 154885 // (wykonuje)
+	relation 148229 ---> name "wykonuje"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 154885 // (wykonuje)
+	  b multiplicity "1" parent class_ref 149253 // Strategia
+      end
+    end
+
+    class 148869 "MenadzerKomunikacjiZUsluga"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 135045 "przekazInformacjeOCzasie"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "czas" type class_ref 141701 // Czas
+	
+	
+	
+	
+	
+      end
+
+      operation 135173 "zaakceptujProsbe"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 135301 "zakonczKomunikacje"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      attribute 143237 "czas"
+	private type class_ref 141701 // Czas
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 143365 "czyZaakceptowanoProsbe"
+	private explicit_type "bool"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 155269 // (wplywa na)
+	relation 148613 ---> name "wplywa na"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 155269 // (wplywa na)
+	  b multiplicity "1" parent class_ref 149125 // MenadzerKomunikatowUsterkowych
+      end
+
+      classrelation 155397 // (wplywa na)
+	relation 148741 ---> name "wplywa na"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 155397 // (wplywa na)
+	  b multiplicity "1" parent class_ref 148997 // MenadzerSwiatel
+      end
+
+      classrelation 155525 // (wplywa na)
+	relation 148869 ---> name "wplywa na"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 155525 // (wplywa na)
+	  b multiplicity "1" parent class_ref 132869 // TrybAwaryjny
+      end
+
+      classrelation 162821 // (wysyla)
+	relation 156165 ---> name "wysyla"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 162821 // (wysyla)
+	  b multiplicity "1" parent class_ref 129413 // KomunikatAwaria
+      end
+
+      classrelation 170757 // (korzysta)
+	relation 164101 ---> name "korzysta"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 170757 // (korzysta)
+	  b multiplicity "1" parent class_ref 149125 // MenadzerKomunikatowUsterkowych
+      end
+    end
+
+    class 148997 "MenadzerSwiatel"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 134917 "wylaczSwiatlaAwaryjne"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 149125 "MenadzerKomunikatowUsterkowych"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 135429 "pokazKomunikat"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "komunikat" type class_ref 130949 // Komunikat
+	
+	
+	
+	
+	
+      end
+
+      classrelation 155141 // (korzysta)
+	relation 148485 ---> name "korzysta"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 155141 // (korzysta)
+	  b multiplicity "1" parent class_ref 129413 // KomunikatAwaria
+      end
+
+      classrelation 171013 // <generalisation>
+	relation 164357 ---|>
+	  a public
+	    classrelation_ref 171013 // <generalisation>
+	  b parent class_ref 156037 // MenadzerKomunikatow
+      end
+    end
+
+    class 149253 "Strategia"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 149381 "Dane"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 149509 "DaneOUsterce"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 128076 "MenadzerKomunikatowPrzygotowaniaDoPracy"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128588 // (udostepnia mozliwosci)
+	relation 128588 ---> name "udostepnia mozliwosci"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 128588 // (udostepnia mozliwosci)
+	  b multiplicity "1" parent class_ref 149125 // MenadzerKomunikatowUsterkowych
+      end
+
+      operation 128076 "wyslijKomunikatZeDrzwiczkiSaOtwarte"
+	public return_type class_ref 130949 // Komunikat
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 170885 // <generalisation>
+	relation 164229 ---|>
+	  a public
+	    classrelation_ref 170885 // <generalisation>
+	  b parent class_ref 156037 // MenadzerKomunikatow
+      end
+    end
+
+    class 128204 "SystemDzwiekowy"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 128204 "wydajDzwiekPrzypominajacyOZatrzasnieciuDrzwiczek"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 128332 "CzytnikRFID"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128972 // (informuje)
+	relation 128972 ---> name "informuje"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 128972 // (informuje)
+	  b multiplicity "1" parent class_ref 154891 // PrzygotowanieDoPracyController
+      end
+    end
+
+    class 128460 "DrzwiczkiAutomatu"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 128460 "otworzDrzwiczki"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      attribute 149893 "czyOtwarte"
+	private explicit_type "bool"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 170373 // <realization>
+	relation 163717 -_-|>
+	  a public
+	    classrelation_ref 170373 // <realization>
+	  b parent class_ref 169221 // Obserwowany
+      end
+    end
+
+    class 156037 "MenadzerKomunikatow"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl "${comment}${abstract}${custom}valuetype ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 162693 // <unidirectional association>
+	relation 156037 --->
+	  a role_name "" private
+	    classrelation_ref 162693 // <unidirectional association>
+	  b parent class_ref 129413 // KomunikatAwaria
+      end
+    end
+
+    class 162565 "HandlerKomunikacjiZUsluga"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 141957 "zaakceptujProsbe"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 148485 "przekazInformacjeOCzasie"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "czas" type class_ref 141701 // Czas
+	
+	
+	
+	
+	
+      end
+
+      classrelation 169349 // (informuje)
+	relation 162693 ---> name "informuje"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 169349 // (informuje)
+	  b multiplicity "1" parent class_ref 148869 // MenadzerKomunikacjiZUsluga
+      end
+    end
+
+    class 169093 "Obserwator"
+      visibility package stereotype "interface"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}interface ${name}${extends} {
+${members}}
+"
+      php_decl "${comment}interface ${name}${extends} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl "${comment}${abstract}${local}interface ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 148613 "aktualizacja"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 170245 // <dependency>
+	relation 163589 -_->
+	  a public
+	    classrelation_ref 170245 // <dependency>
+	  b parent class_ref 169221 // Obserwowany
+      end
+    end
+
+    class 169221 "Obserwowany"
+      visibility package stereotype "interface"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}interface ${name}${extends} {
+${members}}
+"
+      php_decl "${comment}interface ${name}${extends} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl "${comment}${abstract}${local}interface ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 150149 "listaObserwatorow"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 148741 "powiadomObserwatorow"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 148869 "dodajObserwatora"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 148997 "usunObserwatora"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 170117 // <dependency>
+	relation 163461 -_->
+	  a public
+	    classrelation_ref 170117 // <dependency>
+	  b parent class_ref 169093 // Obserwator
+      end
+    end
+  end
+end

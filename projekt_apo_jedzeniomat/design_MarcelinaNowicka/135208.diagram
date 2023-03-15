@@ -1,0 +1,59 @@
+format 224
+
+classinstancecanvas 128040 classinstance_ref 128296 // klient
+  xyz 10 7 2000 life_line_z 2000
+end
+classinstancecanvas 128168 classinstance_ref 128424 // automat
+  xyz 234 8 2000 life_line_z 2000
+end
+classinstancecanvas 128680 classinstance_ref 135336 // zakup
+  xyz 453 9 2000 life_line_z 2000
+end
+classinstancecanvas 129064 classinstance_ref 135464 // platnosc
+  xyz 744 7 2005 life_line_z 2000
+end
+durationcanvas 128296 classinstance_ref 128040 // klient:Klient
+  xyzwh 37 87 2010 11 343
+end
+durationcanvas 128424 classinstance_ref 128168 // automat:Automat
+  xyzwh 275 83 2010 11 303
+end
+durationcanvas 128808 classinstance_ref 128680 // zakup:Zakup
+  xyzwh 484 104 2010 11 250
+end
+durationcanvas 129192 classinstance_ref 129064 // platnosc:Platnosc
+  xyzwh 787 113 2010 11 184
+  overlappingdurationcanvas 129448
+    xyzwh 793 116 2020 11 176
+  end
+end
+msg 128552 synchronous
+  from durationcanvas_ref 128296
+  to durationcanvas_ref 128424
+  yz 87 2015 explicitmsg "1: wyborRodzajuPlatnosci()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "userInput: string"
+  label_xy 52 73
+msg 128936 synchronous
+  from durationcanvas_ref 128424
+  to durationcanvas_ref 128808
+  yz 110 2020 explicitmsg "2: stworzPlatnosc()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "userInput: string"
+  label_xy 297 96
+msg 129320 synchronous
+  from durationcanvas_ref 128808
+  to durationcanvas_ref 129192
+  yz 172 2015 explicitmsg "4: create()"
+  stereotype "<<create>>" xyz 614 186 3000
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "sumaZakupow: int, czyGotowka: bool"
+  label_xy 529 156
+msg 129576 synchronous
+  from durationcanvas_ref 128808
+  to durationcanvas_ref 129448
+  yz 124 2025 explicitmsg "3: czyPlatnoscGotowka()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "userInput: string"
+  label_xy 533 111
+end

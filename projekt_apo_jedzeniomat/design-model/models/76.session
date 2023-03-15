@@ -1,0 +1,17 @@
+window_sizes 1396 585 327 1064 435 104
+
+diagrams
+  active  classdiagram_ref 148235 // design-model
+    1064 435 100 Custom 382 854
+end
+show_stereotypes
+selected operation_ref 129356 // zaktualizujLiczbeProduktowNaPozycji
+open
+  class_ref 128517 // RejestrProduktow
+  classview_ref 134539 // design
+  class_ref 154891 // PrzygotowanieDoPracyController
+  class_ref 128076 // AdapterKomunikatowPrzygotowanieDoPracy
+  class_ref 128204 // SystemDzwiekowy
+  class_ref 128460 // DrzwiczkiAutomatu
+end
+end

@@ -1,0 +1,323 @@
+format 224
+
+classcanvas 128005 class_ref 148485 // InterpretatorDanych
+  classdiagramsettings member_max_width 0 end
+  xyz 599.235 966.371 2000
+end
+classcanvas 128011 class_ref 141067 // Log
+  classdiagramsettings member_max_width 0 end
+  xyz 323.661 532.339 2000
+end
+classcanvas 128040 class_ref 128005 // Automat
+  classdiagramsettings member_max_width 0 end
+  xyz 224.687 659.934 2000
+end
+classcanvas 128133 class_ref 148613 // KreatorStrategiiUsterkowych
+  classdiagramsettings member_max_width 0 end
+  xyz 840.696 963.142 2000
+end
+classcanvas 128139 class_ref 141451 // AnalitykKontroler
+  classdiagramsettings member_max_width 0 end
+  xyz 654.898 200.002 2000
+end
+classcanvas 128168 class_ref 128517 // RejestrProduktow
+  classdiagramsettings member_max_width 0 end
+  xyz 404.018 672.933 2000
+end
+classcanvas 128261 class_ref 148741 // MenadzerStrategiiUsterkowych
+  classdiagramsettings member_max_width 0 end
+  xyz 1128.32 959.152 2000
+end
+classcanvas 128267 class_ref 141579 // SystemOdmierzaniaCzasu
+  classdiagramsettings member_max_width 0 end
+  xyz 717.29 594.608 2000
+end
+classcanvas 128389 class_ref 148869 // MenadzerKomunikacjiZUsluga
+  classdiagramsettings member_max_width 0 end
+  xyz 1554.16 927.323 2000
+end
+classcanvas 128424 class_ref 133765 // Produkt
+  classdiagramsettings member_max_width 0 end
+  xyz 697.073 704.966 2000
+end
+classcanvas 128460 class_ref 128076 // MenadzerKomunikatowPrzygotowaniaDoPracy
+  classdiagramsettings member_max_width 0 end
+  xyz 1438.52 651.012 2000
+end
+classcanvas 128517 class_ref 148997 // MenadzerSwiatel
+  classdiagramsettings member_max_width 0 end
+  xyz 1323.36 959.152 2000
+end
+classcanvas 128552 class_ref 130565 // Zakup
+  classdiagramsettings member_max_width 0 end
+  xyz 17.0787 681.044 2000
+end
+classcanvas 128645 class_ref 149125 // MenadzerKomunikatowUsterkowych
+  classdiagramsettings member_max_width 0 end
+  xyz 1635.36 759.985 2005
+end
+classcanvas 128773 class_ref 132869 // TrybAwaryjny
+  classdiagramsettings member_max_width 0 end
+  xyz 1408.39 810.205 2000
+end
+classcanvas 129029 class_ref 129413 // KomunikatAwaria
+  classdiagramsettings member_max_width 0 end
+  xyz 1496.58 745.132 2000
+end
+classcanvas 129157 class_ref 149253 // Strategia
+  classdiagramsettings member_max_width 0 end
+  xyz 1017.11 865.246 2010
+end
+classcanvas 129163 class_ref 141707 // TrybAutoryzowany
+  classdiagramsettings member_max_width 0 end
+  xyz 477.751 590.263 2000
+end
+classcanvas 129291 class_ref 148235 // KopiaDanychSprzedazy
+  classdiagramsettings member_max_width 0 end
+  xyz 913.641 491.656 2000
+end
+classcanvas 129320 class_ref 128901 // TerminalNaKarte
+  classdiagramsettings member_max_width 0 end
+  xyz 411.55 811.967 2000
+end
+classcanvas 129413 class_ref 132101 // Usterka
+  classdiagramsettings member_max_width 0 end
+  xyz 852.66 861.016 2005
+end
+classcanvas 129419 class_ref 148363 // TrybZwykly
+  classdiagramsettings member_max_width 0 end
+  xyz 1071 398.3 2000
+end
+classcanvas 129484 class_ref 128204 // SystemDzwiekowy
+  classdiagramsettings member_max_width 0 end
+  xyz 1097.08 655.108 2000
+end
+classcanvas 129547 class_ref 154891 // PrzygotowanieDoPracyController
+  classdiagramsettings member_max_width 0 end
+  xyz 1281.05 418.212 2000
+end
+classcanvas 129576 class_ref 130821 // Platnosc
+  classdiagramsettings member_max_width 0 end
+  xyz 36.5417 819.198 2000
+end
+classcanvas 129669 class_ref 149509 // DaneOUsterce
+  classdiagramsettings member_max_width 0 end
+  xyz 621.643 857.957 2005
+end
+classcanvas 129868 class_ref 128332 // CzytnikRFID
+  classdiagramsettings member_max_width 0 end
+  xyz 1682.68 524.163 2000
+end
+classcanvas 129960 class_ref 129157 // UrzadzenieRozpoznajaceMonetyIBanknoty
+  classdiagramsettings member_max_width 0 end
+  xyz 295.584 921.805 2005
+end
+classcanvas 130252 class_ref 128460 // DrzwiczkiAutomatu
+  classdiagramsettings member_max_width 0 end
+  xyz 1666.01 417.809 2000
+end
+note 131333 "WZORZEC FABRYKA
+trworzy Strategie na podstawie Usterki"
+  xyzwh 836.629 1012.73 2016 199 46
+classcanvas 131589 class_ref 156037 // MenadzerKomunikatow
+  classdiagramsettings member_max_width 0 end
+  xyz 1749.81 651.747 2000
+end
+classcanvas 133125 class_ref 162565 // HandlerKomunikacjiZUsluga
+  classdiagramsettings member_max_width 0 end
+  xyz 1220.19 854.66 2005
+end
+note 133381 "WZORZEC OBSERWATOR
+Controller obseruje atrybut czyOtwarte DrzwiczekAutomatu
+Controler wykonuje operacje na podstawie wiadomosci o tym czy drzwiczki sa otwarte"
+  xyzwh 1248 194.11 2005 438 76
+classcanvas 133637 class_ref 169093 // Obserwator
+  classdiagramsettings member_max_width 0 end
+  xyz 1344.68 284.06 2000
+end
+classcanvas 133893 class_ref 169221 // Obserwowany
+  classdiagramsettings member_max_width 0 end
+  xyz 1501.7 277 2000
+end
+relationcanvas 128076 relation_ref 128076 // aktywuje
+  decenter_begin 407
+  decenter_end 136
+  from ref 129547 z 2001 to point 1181.14 558.455
+  line 130508 z 2001 label "aktywuje" italic max_width 255 xyz 1006 566 2001 to ref 128267
+  no_role_a no_role_b
+  multiplicity_a_pos 883 610 3000 multiplicity_b_pos 1271 499 3000
+end
+relationcanvas 128204 relation_ref 128204 // informuje
+  decenter_begin 861
+  decenter_end 888
+  from ref 128267 z 2001 label "informuje" italic max_width 255 xyz 1054 605 2001 to ref 129547
+  no_role_a no_role_b
+  multiplicity_a_pos 1271 587 3000 multiplicity_b_pos 875 652 3000
+end
+relationcanvas 128296 relation_ref 128040 // <unidirectional association>
+  from ref 128040 z 2001 to ref 128168
+  role_a_pos 355 708 3000 no_role_b
+  multiplicity_a_pos 391 727 3000 multiplicity_b_pos 370 722 3000
+end
+relationcanvas 129192 relation_ref 128168 // <unidirectional association>
+  from ref 128040 z 2001 to ref 128552
+  role_a_pos 122 701 3000 no_role_b
+  multiplicity_a_pos 127 720 3000 multiplicity_b_pos 205 718 3000
+end
+relationcanvas 129448 relation_ref 128296 // <unidirectional association>
+  from ref 128040 z 2001 to ref 129320
+  role_a_pos 364 815 3000 no_role_b
+  multiplicity_a_pos 405 834 3000 multiplicity_b_pos 365 773 3000
+end
+relationcanvas 129612 relation_ref 128844 // uzywa
+  from ref 129547 z 2001 label "uzywa" italic max_width 255 xyz 1283.5 612 2001 to point 1284.03 639.375
+  line 129740 z 2001 to ref 129484
+  no_role_a no_role_b
+  multiplicity_a_pos 1281 646 3000 multiplicity_b_pos 1314 599 3000
+end
+relationcanvas 129704 relation_ref 128424 // <unidirectional association>
+  from ref 128040 z 2001 to ref 129576
+  role_a_pos 156 797 3000 no_role_b
+  multiplicity_a_pos 162 816 3000 multiplicity_b_pos 208 747 3000
+end
+relationcanvas 129797 relation_ref 147717 // potrzebuje
+  from ref 128005 z 2006 label "potrzebuje" italic max_width 255 xyz 636 915 2006 to ref 129669
+  no_role_a no_role_b
+  multiplicity_a_pos 649 903 3000 multiplicity_b_pos 645 946 3000
+end
+relationcanvas 129832 relation_ref 128552 // <unidirectional association>
+  from ref 128168 z 2001 to ref 128424
+  role_a_pos 612 722 3000 no_role_b
+  multiplicity_a_pos 682 747 3000 multiplicity_b_pos 615 744 3000
+end
+relationcanvas 129925 relation_ref 147845 // przekazuje
+  from ref 128005 z 2006 label "przekazuje" italic max_width 255 xyz 752 913 2006 to ref 129413
+  no_role_a no_role_b
+  multiplicity_a_pos 837 899 3000 multiplicity_b_pos 726 956 3000
+end
+relationcanvas 129996 relation_ref 128972 // informuje
+  from ref 129868 z 2001 label "informuje" italic max_width 255 xyz 1595 517.5 2001 to ref 129547
+  no_role_a no_role_b
+  multiplicity_a_pos 1557 532 3000 multiplicity_b_pos 1670 545 3000
+end
+relationcanvas 130053 relation_ref 147973 // potrzebuje
+  from ref 128133 z 2006 label "potrzebuje" italic max_width 255 xyz 874 916 2006 to ref 129413
+  no_role_a no_role_b
+  multiplicity_a_pos 875 906 3000 multiplicity_b_pos 895 944 3000
+end
+relationcanvas 130181 relation_ref 148101 // przekazuje
+  from ref 128133 z 2011 label "przekazuje" italic max_width 255 xyz 961 916 2011 to ref 129157
+  no_role_a no_role_b
+  multiplicity_a_pos 1018 906 3000 multiplicity_b_pos 970 949 3000
+end
+relationcanvas 130216 relation_ref 128680 // <unidirectional association>
+  from ref 128040 z 2006 to ref 129960
+  role_a_pos 416 908 3000 no_role_b
+  multiplicity_a_pos 379 908 3000 multiplicity_b_pos 293 761 3000
+end
+relationcanvas 130309 relation_ref 148229 // wykonuje
+  from ref 128261 z 2011 label "wykonuje" italic max_width 255 xyz 1106 915 2011 to ref 129157
+  no_role_a no_role_b
+  multiplicity_a_pos 1087 911 3000 multiplicity_b_pos 1146 949 3000
+end
+relationcanvas 130380 relation_ref 129228 // kontroluje
+  decenter_end 828
+  from ref 129547 z 2001 label "kontroluje" italic max_width 255 xyz 1585.5 460.5 2001 to ref 130252
+  no_role_a no_role_b
+  multiplicity_a_pos 1657 468 3000 multiplicity_b_pos 1557 488 3000
+end
+relationcanvas 130571 relation_ref 128651 // <unidirectional association>
+  from ref 128011 z 2001 to ref 128139
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130636 relation_ref 129356 // informuje
+  decenter_end 906
+  from ref 129547 z 2001 label "informuje" italic max_width 255 xyz 1114 624 2001 to point 989.514 703.003
+  line 130892 z 2001 to point 939.518 857.765
+  line 130764 z 2001 to ref 128168
+  no_role_a no_role_b
+  multiplicity_a_pos 615 792 3000 multiplicity_b_pos 1271 575 3000
+end
+relationcanvas 130699 relation_ref 128779 // uzywa
+  from ref 128139 z 2001 label "uzywa" italic max_width 255 xyz 517 438 2001 to ref 128011
+  no_role_a no_role_b
+  multiplicity_a_pos 424 537 3000 multiplicity_b_pos 641 366 3000
+end
+relationcanvas 130955 relation_ref 128907 // aktywuje
+  from ref 128139 z 2001 label "aktywuje" italic max_width 255 xyz 754 487 2001 to ref 128267
+  no_role_a no_role_b
+  multiplicity_a_pos 772 575 3000 multiplicity_b_pos 748 415 3000
+end
+relationcanvas 131077 relation_ref 148741 // wplywa na
+  from ref 128389 z 2001 label "wplywa na" italic max_width 255 xyz 1481 966.5 2001 to ref 128517
+  no_role_a no_role_b
+  multiplicity_a_pos 1464 987 3000 multiplicity_b_pos 1546 986 3000
+end
+relationcanvas 131205 relation_ref 148869 // wplywa na
+  from ref 128389 z 2001 label "wplywa na" italic max_width 255 xyz 1514 877 2001 to ref 128773
+  no_role_a no_role_b
+  multiplicity_a_pos 1501 867 3000 multiplicity_b_pos 1572 943 3000
+end
+relationcanvas 131467 relation_ref 135563 // pozwala na dostep do
+  decenter_end 564
+  from ref 128139 z 2001 label "pozwala na dostep do" italic max_width 255 xyz 579 485 2001 to ref 129163
+  no_role_a no_role_b
+  multiplicity_a_pos 567 573 3000 multiplicity_b_pos 667 415 3000
+end
+relationcanvas 131595 relation_ref 135691 // aktywuje
+  from ref 128139 z 2001 label "aktywuje" italic max_width 255 xyz 933 353 2001 to ref 129419
+  no_role_a no_role_b
+  multiplicity_a_pos 1053 410 3000 multiplicity_b_pos 851 341 3000
+end
+relationcanvas 131723 relation_ref 135819 // inicjalizuje
+  from ref 128139 z 2001 label "inicjalizuje" italic max_width 255 xyz 893 418 2001 to ref 129291
+  role_a_pos 979 480 3000 no_role_b
+  no_multiplicity_a multiplicity_b_pos 851 389 3000
+end
+relationcanvas 132869 relation_ref 156165 // wysyla
+  from ref 128389 z 2001 label "wysyla" italic max_width 255 xyz 1571.5 843.5 2001 to ref 129029
+  no_role_a no_role_b
+  multiplicity_a_pos 1550 796 3000 multiplicity_b_pos 1607 915 3000
+end
+relationcanvas 133253 relation_ref 162693 // informuje
+  from ref 133125 z 2006 label "informuje" italic max_width 255 xyz 1429.5 876 3000 to ref 128389
+  no_role_a no_role_b
+  multiplicity_a_pos 1546 962 3000 multiplicity_b_pos 1387 914 3000
+end
+relationcanvas 134405 relation_ref 163461 // <dependency>
+  from ref 133893 z 2001 to ref 133637
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 134661 relation_ref 163717 // <realization>
+  from ref 130252 z 2001 to ref 133893
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 134789 relation_ref 163845 // <realization>
+  from ref 129547 z 2001 to ref 133637
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 134917 relation_ref 163973 // korzysta
+  from ref 129547 z 2001 label "korzysta" italic max_width 255 xyz 1505 614 3000 to ref 128460
+  no_role_a no_role_b
+  multiplicity_a_pos 1532 637 3000 multiplicity_b_pos 1494 606 3000
+end
+relationcanvas 135045 relation_ref 164101 // korzysta
+  from ref 128389 z 2006 label "korzysta" italic max_width 255 xyz 1678 855 3000 to ref 128645
+  no_role_a no_role_b
+  multiplicity_a_pos 1715 810 3000 multiplicity_b_pos 1656 915 3000
+end
+relationcanvas 135173 relation_ref 164229 // <generalisation>
+  from ref 128460 z 2001 to ref 131589
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 135301 relation_ref 164357 // <generalisation>
+  from ref 128645 z 2006 to ref 131589
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+end

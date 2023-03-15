@@ -1,0 +1,36 @@
+format 224
+
+classinstance 128076 class_ref 128076 // ;
+ name ""  xyz 116 90 2000
+classinstance 128204 class_ref 128204 // PrzygotowanieDoPracyController
+ name ""  xyz 387 97 2000
+classinstancecanvas 129100 classinstance_ref 142028 // 
+  xyz 396 205 2000
+end
+linkcanvas 128460
+  from ref 128076 z 2001 to ref 128204
+dirscanvas 128588 z 1000 linkcanvas_ref 128460
+  
+  forward_label "1 uruchomProcedureAktualizacjiLiczbyProduktow()" xyz 140 77 3000
+linkcanvas 129228
+  from ref 128204 z 2001 to ref 129100
+dirscanvas 129356 z 1000 linkcanvas_ref 129228
+  
+  forward_label "3 zacznijOdliczacCzasOdPodaniaLiczbyProduktow()" xyz 492 157 3000
+selflinkcanvas 131788 classinstance_ref 128204 // :PrzygotowanieDoPracyController
+  xy 491 97
+  
+  forward_label "2 zapytajOLiczbeProduktowNaPozycjach()" xyz 420 66 3000
+msgs
+  msg operation_ref 148684 // "uruchomProcedureAktualizacjiLiczbyProduktow()"
+    forward ranks 1 "1" dirscanvas_ref 128588
+    msgs
+      msg operation_ref 162892 // "zapytajOLiczbeProduktowNaPozycjach()"
+	forward ranks 2 "1.1" selflinkcanvas_ref 131788
+	no_msg
+    msgsend
+  msg operation_ref 148940 // "zacznijOdliczacCzasOdPodaniaLiczbyProduktow()"
+    forward ranks 3 "2" dirscanvas_ref 129356
+    no_msg
+msgsend
+end

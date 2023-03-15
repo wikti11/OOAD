@@ -1,0 +1,22 @@
+window_sizes 1492 659 450 1037 509 104
+
+diagrams
+  sequencediagram_ref 135336 // 1-3-wprowadzenieGotowki
+    829 407 100 Custom 0 0
+  sequencediagram_ref 141864 // 1-4-wprowadzenieKarty
+    114 86 100 Custom 0 0
+  classdiagram_ref 128005 // domain-model
+    114 86 100 Custom 624 0
+  sequencediagram_ref 128680 // 1-1-wybórProduktu
+    114 86 100 Custom 0 0
+  active  sequencediagram_ref 141992 // 1-5-wprowadzeniePinu
+    1037 509 100 Custom 0 0
+  sequencediagram_ref 135208 // 1-2-wybórRodzajuPlatnosci
+    114 86 100 Custom 0 0
+end
+show_stereotypes
+selected sequencediagram_ref 141992 // 1-5-wprowadzeniePinu
+open
+  classview_ref 128040 // design
+end
+end

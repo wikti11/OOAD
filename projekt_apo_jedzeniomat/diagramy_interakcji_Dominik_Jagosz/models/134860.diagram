@@ -1,0 +1,31 @@
+format 224
+
+classinstancecanvas 128588 classinstance_ref 128204 // 
+  xyz 212 13 2005 life_line_z 2000
+end
+classinstance 129484 class_ref 142156 // CzytnikRFID
+  drawing_mode actor  name ""   xyz 57 10 2000 life_line_z 2000
+classinstance 130764 class_ref 142284 // DrzwiczkiAutomatu
+  name ""   xyz 458 14 2000 life_line_z 2000
+durationcanvas 128844 classinstance_ref 128588 // :PrzygotowanieDoPracyController
+  xyzwh 294 88 2010 11 110
+end
+durationcanvas 130380 classinstance_ref 129484 // :CzytnikRFID
+  xyzwh 83 78 2010 11 97
+end
+durationcanvas 130892 classinstance_ref 130764 // :DrzwiczkiAutomatu
+  xyzwh 507 102 2010 11 129
+end
+msg 130636 synchronous
+  from durationcanvas_ref 130380
+  to durationcanvas_ref 128844
+  yz 108 2025 msg operation_ref 142028 // "obsluzRozpoznanieBrelokaRFID()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 112 91
+msg 131020 synchronous
+  from durationcanvas_ref 128844
+  to durationcanvas_ref 130892
+  yz 151 2015 msg operation_ref 142156 // "otworzDrzwiczki()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 361 137
+end

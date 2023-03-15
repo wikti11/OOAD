@@ -1,0 +1,50 @@
+format 224
+
+classinstance 129035 class_ref 141195 // Analityk
+  name ""   xyz 97 124 2000 life_line_z 2000
+classinstance 130187 class_ref 141451 // AnalitykKontroler
+  name ""   xyz 259 123 2000 life_line_z 2000
+classinstance 130699 class_ref 141067 // Log
+  name ""   xyz 442 125 2000 life_line_z 2000
+durationcanvas 130315 classinstance_ref 129035 // :Analityk
+  xyzwh 114 173 2010 11 40
+end
+durationcanvas 130443 classinstance_ref 130187 // :AnalitykKontroler
+  xyzwh 302 173 2010 11 25
+end
+durationcanvas 130827 classinstance_ref 130699 // :Log
+  xyzwh 461 183 2010 11 25
+end
+durationcanvas 131083 classinstance_ref 130699 // :Log
+  xyzwh 461 227 2010 11 40
+end
+durationcanvas 131339 classinstance_ref 130699 // :Log
+  xyzwh 461 294 2010 11 40
+end
+durationcanvas 131467 classinstance_ref 130187 // :AnalitykKontroler
+  xyzwh 302 294 2010 11 25
+end
+msg 130571 synchronous
+  from durationcanvas_ref 130315
+  to durationcanvas_ref 130443
+  yz 173 2015 msg operation_ref 145163 // "restartSystemu()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 172 159
+msg 130955 synchronous
+  from durationcanvas_ref 130443
+  to durationcanvas_ref 130827
+  yz 183 2020 msg operation_ref 145291 // "zapiszLogi()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 344 169
+reflexivemsg 131211 synchronous
+  to durationcanvas_ref 131083
+  yz 227 2015 msg operation_ref 137995 // "przeslijLogiBledow()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 477 213
+msg 131595 synchronous
+  from durationcanvas_ref 131339
+  to durationcanvas_ref 131467
+  yz 294 2015 msg operation_ref 145419 // "uruchomPonownieAutomat()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 318 280
+end

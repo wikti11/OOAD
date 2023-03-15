@@ -1,0 +1,47 @@
+format 224
+
+classinstance 128651 class_ref 141195 // Analityk
+  name ""   xyz 202 101 2000 life_line_z 2000
+classinstance 128779 class_ref 141451 // AnalitykKontroler
+  name ""   xyz 374 109 2000 life_line_z 2000
+classinstance 129291 class_ref 141579 // SystemOdmierzaniaCzasu
+  name ""   xyz 520 105 2000 life_line_z 2000
+durationcanvas 128907 classinstance_ref 128651 // :Analityk
+  xyzwh 219 169 2010 11 250
+  overlappingdurationcanvas 130315
+    xyzwh 225 302 2020 11 25
+  end
+end
+durationcanvas 129035 classinstance_ref 128779 // :AnalitykKontroler
+  xyzwh 417 167 2010 11 257
+  overlappingdurationcanvas 130059
+    xyzwh 423 247 2020 11 25
+  end
+end
+durationcanvas 129419 classinstance_ref 129291 // :SystemOdmierzaniaCzasu
+  xyzwh 585 173 2010 11 25
+end
+msg 129163 synchronous
+  from durationcanvas_ref 128907
+  to durationcanvas_ref 129035
+  yz 169 2015 msg operation_ref 137099 // "wyjscieZTrybuAutoryzowanego()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 243 155
+msg 129547 synchronous
+  from durationcanvas_ref 129035
+  to durationcanvas_ref 129419
+  yz 173 2020 msg operation_ref 137227 // "zakonczOdmierzacCzas()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 443 159
+reflexivemsg 130187 synchronous
+  to durationcanvas_ref 130059
+  yz 247 2025 msg operation_ref 144907 // "zakonczSesje()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 431 233
+msg 130443 synchronous
+  from durationcanvas_ref 129035
+  to durationcanvas_ref 130315
+  yz 302 2025 msg operation_ref 145035 // "przejscieDoTrybuZwyklego()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 256 288
+end

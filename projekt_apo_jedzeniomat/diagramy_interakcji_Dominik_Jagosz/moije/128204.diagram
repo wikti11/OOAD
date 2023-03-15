@@ -1,0 +1,51 @@
+format 224
+
+classinstance 128204 class_ref 128332 // zegarOtwarciaDrzwiczek
+  drawing_mode actor name ""  xyz 7.44943 50.8442 2000
+classinstance 128716 class_ref 128204 // PrzygotowanieDoPracyController
+ name ""  xyz 321.498 57.1592 2000
+classinstancecanvas 129612 classinstance_ref 128588 // 
+  xyz 713 158 2000
+end
+classinstancecanvas 130764 classinstance_ref 135244 // 
+  xyz 720 56 2000
+end
+classinstancecanvas 131148 classinstance_ref 135372 // 
+  xyz 1024 54 2000
+end
+linkcanvas 129100
+  from ref 128204 z 2001 to ref 128716
+dirscanvas 129228 z 1000 linkcanvas_ref 129100
+  
+  forward_label "1 obsluzPrzekroczenieCzasuOtwarciaDrzwiczek()" xyz 107 37 3000
+linkcanvas 129740
+  from ref 128716 z 2001 to point 406 168
+  line 131916 z 2001 to ref 129612
+dirscanvas 130124 z 1000 linkcanvas_ref 131916
+  
+  forward_label "2 wydajDzwiekPrzypominajacyOZatrzasnieciuDrzwiczek()" xyz 418 139 3000
+linkcanvas 130892 decenter_end 521
+  from ref 128716 z 2001 to ref 130764
+dirscanvas 131020 z 1000 linkcanvas_ref 130892
+  
+  forward_label "3 wyslijKomunikatZeDrzwiczkiSaOtwarte() : Komunikat" xyz 475 38 3000
+linkcanvas 131276
+  from ref 130764 z 2001 to ref 131148
+dirscanvas 131404 z 1000 linkcanvas_ref 131276
+  
+  forward_label "4 wyswietlKomunikat(in  : Komunikat)" xyz 839 36 3000
+msgs
+  msg operation_ref 128460 // "obsluzPrzekroczenieCzasuOtwarciaDrzwiczek()"
+    forward ranks 1 "1" dirscanvas_ref 129228
+    no_msg
+  msg operation_ref 128588 // "wydajDzwiekPrzypominajacyOZatrzasnieciuDrzwiczek()"
+    forward ranks 2 "2" dirscanvas_ref 130124
+    no_msg
+  msg operation_ref 135116 // "wyslijKomunikatZeDrzwiczkiSaOtwarte() : Komunikat"
+    forward ranks 3 "3" dirscanvas_ref 131020
+    no_msg
+  msg operation_ref 135244 // "wyswietlKomunikat(in  : Komunikat)"
+    forward ranks 4 "4" dirscanvas_ref 131404
+    no_msg
+msgsend
+end

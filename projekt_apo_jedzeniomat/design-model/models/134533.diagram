@@ -1,0 +1,160 @@
+format 224
+
+pseudostatecanvas 128005 pseudostate_ref 134533 // initial 
+   xyz 77 146 2000
+end
+statecanvas 128133 state_ref 134661 // gotowy do pracy
+  
+  xyzwh 76 191 2000 111 33
+end
+statecanvas 128517 state_ref 134789 // tryb sprzedazy
+  
+  xyzwh 529 193 2000 103 33
+end
+statecanvas 128901 state_ref 135173 // platnosc gotowka
+  
+  xyzwh 750 344 2000 119 33
+end
+statecanvas 129029 state_ref 135301 // platnosc karta
+  
+  xyzwh 388 328 2000 99 33
+end
+statecanvas 129157 state_ref 135429 // wydanie reszty
+  
+  xyzwh 757 494 2000 105 33
+end
+statecanvas 129285 state_ref 135557 // autoryzacja
+  
+  xyzwh 405 478 2000 83 33
+end
+statecanvas 132101 state_ref 135813 // wydanie (przygotowanego) produktu
+  
+  xyzwh 529 652 2000 225 33
+end
+statecanvas 132741 state_ref 135941 // produkt zutylizowany
+  
+  xyzwh 485 799 2000 139 35
+end
+statecanvas 132869 state_ref 136069 // produkt odebrany
+  
+  xyzwh 764 794 2000 119 33
+end
+pseudostatecanvas 135301 pseudostate_ref 134917 // final 
+   xyz 541 879 2005
+end
+pseudostatecanvas 135429 pseudostate_ref 135045 // final 
+   xyz 821 882 2005
+end
+transitioncanvas 129669 transition_ref 134533 // wydanie produktu
+  decenter_begin 272
+  decenter_end 272
+  
+  from ref 128133 z 2001 label "wydanie produktu" xyz 309.5 185.5 3000 to ref 128517
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 129797 transition_ref 134661 // wybrano platnosc karta
+  decenter_begin 474
+  decenter_end 908
+  
+  from ref 128517 z 2001 label "wybrano platnosc karta" xyz 470 280 3000 to ref 129029
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 129925 transition_ref 134789 // anulowano
+  decenter_begin 190
+  decenter_end 202
+  
+  from ref 129029 z 2001 label "anulowano" xyz 410 268 3000 to ref 128517
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 130565 transition_ref 135045 // wybrano platnosc gotowka
+  decenter_begin 582
+  
+  from ref 128517 z 2001 label "wybrano platnosc gotowka" xyz 618 277 3000 to ref 128901
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 130949 transition_ref 135301 // anulowano
+  decenter_begin 830
+  decenter_end 912
+  
+  from ref 128901 z 2001 label "anulowano" xyz 731 268 3000 to ref 128517
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 131077 transition_ref 135429 // dokonano platnosci
+  decenter_begin 908
+  decenter_end 866
+  
+  from ref 129029 z 2001 label "dokonano platnosci" xyz 461 412 3000 to ref 129285
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 131205 transition_ref 135557 // nie powiodla sie
+  decenter_begin 108
+  decenter_end 231
+  
+  from ref 129285 z 2001 label "nie powiodla sie" xyz 372 411 3000 to ref 129029
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 131333 transition_ref 135685 // dokonano platnosci
+  decenter_begin 546
+  
+  from ref 128901 z 2001 label "dokonano platnosci" xyz 765 427 3000 to ref 129157
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 132229 transition_ref 136197 // odebrano reszte
+  
+  from ref 129157 z 2001 label "odebrano reszte" xyz 682 581 3000 to ref 132101
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 132357 transition_ref 136325 // powiodla sie
+  
+  from ref 129285 z 2001 label "powiodla sie" xyz 520 557 3000 to ref 132101
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 132613 transition_ref 136453 // <transition>
+  decenter_begin 526
+  decenter_end 197
+  
+  from ref 128005 z 2001 to ref 128133
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 132997 transition_ref 136581 // odebrano
+  
+  from ref 132101 z 2001 label "odebrano" xyz 737.5 728 3000 to ref 132869
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 133125 transition_ref 136709 // [minela 1 minuta bezczynnosci] zutylizowano
+  
+  from ref 132101 z 2001 label "[minela 1 minuta bezczynnosci] zutylizowano" xyz 469 747 3000 to ref 132741
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 133381 transition_ref 136965 // [minela 1 minuta bezczynnosci] anulowano
+  decenter_begin 726
+  decenter_end 726
+  
+  from ref 128517 z 2001 label "[minela 1 minuta bezczynnosci] anulowano" xyz 246.5 220 3000 to ref 128133
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 133509 transition_ref 137093 // [minela 1 minuta bezczynnosci] anulowano
+  
+  from ref 129029 z 2001 label "[minela 1 minuta bezczynnosci] anulowano" xyz 146 349 3000 to point 171 337
+  line 133637 z 2001 to ref 128133
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 133765 transition_ref 137221 // [minela 1 minuta bezczynnosci] anulowano
+  geometry VHV unfixed
+  
+  from ref 128901 z 2001 label "[minela 1 minuta bezczynnosci] anulowano" xyz 384 100.5 3000 to point 807 128
+  line 137093 z 2001 to point 129 128
+  line 137221 z 2001 to ref 128133
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 135557 transition_ref 137349 // <transition>
+  
+  from ref 132741 z 2006 to ref 135301
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 135685 transition_ref 137477 // <transition>
+  
+  from ref 132869 z 2006 to ref 135429
+  write_horizontally default show_definition default drawing_language default
+end
+end

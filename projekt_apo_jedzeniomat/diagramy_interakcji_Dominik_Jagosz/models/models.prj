@@ -1,0 +1,534 @@
+format 224
+"moije"
+  revision 9
+  modified_by 76 "s464871"
+
+
+  
+  // class settings
+  default_attribute_visibility private default_relation_visibility private default_operation_visibility public
+  
+  classdiagramsettings draw_all_relations yes hide_attributes no hide_operations no hide_getset_operations no hide_ports no show_members_full_definition no show_members_visibility no show_members_stereotype no show_members_context no show_members_multiplicity no show_members_initialization no show_attribute_modifiers no member_max_width 127 show_parameter_dir yes show_parameter_name yes package_name_in_tab no class_drawing_mode natural drawing_language uml show_context_mode no auto_label_position yes show_relation_modifiers no show_relation_visibility no show_infonote no shadow yes gradient none show_stereotype_properties no end
+  
+  classcompositediagramsettings auto_label_position yes draw_all_relations yes shadow yes gradient none end
+  
+  usecasediagramsettings package_name_in_tab no show_context_mode no auto_label_position yes draw_all_relations yes class_drawing_mode actor shadow yes gradient none show_stereotype_properties no end
+  
+  sequencediagramsettings show_full_operations_definition no show_class_of_operation no write_horizontally yes instances_drawing_mode natural drawing_language uml draw_all_relations yes shadow yes gradient none show_stereotype_properties no show_class_context_mode no show_msg_context_mode no end
+  
+  collaborationdiagramsettings show_full_operations_definition no show_class_of_operation no show_hierarchical_rank no write_horizontally yes instances_drawing_mode natural drawing_language uml package_name_in_tab no show_class_pack_context_mode no show_msg_context_mode no draw_all_relations yes shadow yes gradient none show_stereotype_properties no end
+  
+  objectdiagramsettings write_horizontally yes package_name_in_tab no show_class_pack_context_mode no auto_label_position yes draw_all_relations yes shadow yes gradient none show_stereotype_properties no end
+  
+  objectcompositediagramsettings auto_label_position yes draw_all_relations yes shadow yes gradient none end
+  
+  componentdiagramsettings package_name_in_tab no show_context_mode no auto_label_position yes draw_all_relations yes shadow yes gradient none
+   draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no end
+  
+  deploymentdiagramsettings package_name_in_tab no show_context_mode no write_horizontally yes auto_label_position yes draw_all_relations yes shadow yes gradient none
+   draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no end
+  
+  statediagramsettings package_name_in_tab no show_context_mode no auto_label_position yes write_label_horizontally yes show_trans_definition no draw_all_relations yes shadow yes gradient none
+   show_activities yes region_horizontally yes drawing_language uml show_stereotype_properties no end
+  
+  activitydiagramsettings package_name_in_tab no show_context_mode no show_opaque_action_definition no auto_label_position yes write_label_horizontally no draw_all_relations yes shadow yes gradient none
+   show_infonote yes drawing_language uml show_stereotype_properties no end
+  
+  class_color yellow duration_color transparent continuation_color gray note_color blue fragment_color transparent subject_color transparent usecase_color yellow package_color transparent component_color green artifact_color green deploymentnode_color gray state_color yellow stateaction_color transparent activity_color transparent activityregion_color transparent activitypartition_color transparent activityaction_color transparent parameterpin_color white generalization_color black 
+  dpi 96
+  font_size 8
+  diagram_format A4
+
+  image_root_dir ""
+
+
+  mark_for_import
+  
+  usecaseview 128076 "design"
+    
+    usecasediagramsettings end
+    
+    sequencediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    activitydiagramsettings
+     end
+    sequencediagram 128076 "2-1-otwarcieDrzwiczekAutomatu"
+      sequencediagramsettings show_full_operations_definition yes drawing_language uml draw_all_relations yes shadow yes show_stereotype_properties yes show_msg_context_mode no end
+      overlapping_bars size A4
+    end
+
+    class 128076 ";"
+      visibility package stereotype "actor"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    classinstance 128076 ""
+      type class_ref 128076 // ;
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 128204 "PrzygotowanieDoPracyController"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 128076 "obsluzOtwarcieDrzwiczek"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 128460 "obsluzPrzekroczenieCzasuOtwarciaDrzwiczek"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 141772 "obsluzZamkniecieDrzwiczek"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 142028 "obsluzRozpoznanieBrelokaRFID"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 148684 "uruchomProcedureAktualizacjiLiczbyProduktow"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 149196 "wprowadzLiczbeProduktow"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "pozycja" explicit_type "uint"
+	  param in name "liczba_produktow" explicit_type "uint"
+	
+	
+	
+	
+	
+      end
+
+      operation 155724 "obsuzPrzekroczenieCzasuPodaniaLiczbyProduktow"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 162892 "zapytajOLiczbeProduktowNaPozycjach"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 163020 "zapiszLiczbeProduktowNaPozycji"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "pozycja" explicit_type "ushort"
+	  param in name "liczba_produktow" explicit_type "uint"
+	
+	
+	
+	
+	
+      end
+
+      operation 163148 "zakonczWprowadzanieLiczbyProduktow"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    classinstance 128204 ""
+      type class_ref 128204 // PrzygotowanieDoPracyController
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 128332 "zegarOtwarciaDrzwiczek"
+      visibility package stereotype "actor"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 128204 "zacznijOdliczacCzasOtwarciaDrzwiczek"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 141900 "przestanOdliczacCzasOtwarciaDrzwiczek"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    classinstance 128332 ""
+      type class_ref 128332 // zegarOtwarciaDrzwiczek
+      attributes
+        end
+      relations
+        end
+    end
+
+    collaborationdiagram 128204 "2-6-przekroczenieCzasuOtwarciaDrzwiczek"
+      collaborationdiagramsettings show_full_operations_definition yes drawing_language uml show_msg_context_mode no draw_all_relations yes shadow yes show_stereotype_properties yes end
+      size D
+    end
+
+    class 128588 "SystemDzwiekowy"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 128588 "wydajDzwiekPrzypominajacyOZatrzasnieciuDrzwiczek"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    classinstance 128588 ""
+      type class_ref 128588 // SystemDzwiekowy
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 128716 "Czas"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 135372 "SystemKomunikatow"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 135116 "wyslijKomunikatZeDrzwiczkiSaOtwarte"
+	public return_type class_ref 135628 // Komunikat
+	nparams 0
+	nexceptions 1
+	  exception class_ref 128076 // ;
+	
+	
+	
+	
+	
+      end
+
+      operation 149068 "wyslijKomunikatZProsbaOPodanieLiczbyProduktowNaPozycji"
+	public return_type class_ref 135628 // Komunikat
+	nparams 1
+	  param in name "pozycja" explicit_type "uint"
+	
+	
+	
+	
+	
+      end
+    end
+
+    classinstance 135244 ""
+      type class_ref 135372 // SystemKomunikatow
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 135500 "WyswietlaczKomunikatow"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 135244 "wyswietlKomunikat"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "" type class_ref 135628 // Komunikat
+	
+	
+	
+	
+	
+      end
+    end
+
+    classinstance 135372 ""
+      type class_ref 135500 // WyswietlaczKomunikatow
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 135628 "Komunikat"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    sequencediagram 134732 "2-4-zamkniecieDrzwiczekAutomatu"
+      sequencediagramsettings show_full_operations_definition yes drawing_language uml draw_all_relations yes shadow yes show_stereotype_properties yes show_msg_context_mode no end
+      overlapping_bars size A4
+    end
+
+    sequencediagram 134860 "2-5-rozpoznanieBrelokaRFID"
+      sequencediagramsettings show_full_operations_definition yes drawing_language uml draw_all_relations yes shadow yes show_stereotype_properties yes show_msg_context_mode no end
+      overlapping_bars size A4
+    end
+
+    class 142156 "CzytnikRFID"
+      visibility package stereotype "actor"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 142284 "DrzwiczkiAutomatu"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 142156 "otworzDrzwiczki"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    collaborationdiagram 141388 "2-2-uruchomienieProceduryAktualizacjiLiczbyProduktow"
+      collaborationdiagramsettings show_full_operations_definition yes end
+      size E
+    end
+
+    class 148812 "RejestrProduktow"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 156364 "zaktualizujLiczbeProduktowNaPozycji"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "pozycja" explicit_type "ushort"
+	  param in name "liczba_produktow" explicit_type "uint"
+	
+	
+	
+	
+	
+      end
+    end
+
+    classinstance 141900 ""
+      type class_ref 148812 // RejestrProduktow
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 148940 "zegarPodaniaLiczbyProduktow"
+      visibility package stereotype "actor"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 148940 "zacznijOdliczacCzasOdPodaniaLiczbyProduktow"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 156236 "przestanOdliczacCzasOdPodaniaLiczbyProduktow"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    classinstance 142028 ""
+      type class_ref 148940 // zegarPodaniaLiczbyProduktow
+      attributes
+        end
+      relations
+        end
+    end
+
+    collaborationdiagram 147916 "2-3-wprowadzenieLiczbyProduktow"
+      collaborationdiagramsettings show_full_operations_definition yes end
+      size E
+    end
+
+    collaborationdiagram 154444 "2-7-przekroczenieCzasuPodaniaLiczbyProduktow"
+      collaborationdiagramsettings show_full_operations_definition yes drawing_language uml show_msg_context_mode no draw_all_relations yes shadow yes show_stereotype_properties yes end
+      size D
+    end
+
+    classinstance 148684 ""
+      type class_ref 148940 // zegarPodaniaLiczbyProduktow
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 148812 ""
+      type class_ref 148812 // RejestrProduktow
+      attributes
+        end
+      relations
+        end
+    end
+
+    collaborationdiagram 160972 "2-8-zakonczenieWprowadzaniaLiczbyProduktow"
+      collaborationdiagramsettings show_full_operations_definition yes end
+      size E
+    end
+  end
+end

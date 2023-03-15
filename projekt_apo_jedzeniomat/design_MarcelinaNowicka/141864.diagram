@@ -1,0 +1,61 @@
+format 224
+
+classinstancecanvas 128040 classinstance_ref 128296 // klient
+  xyz 54 4 2000 life_line_z 2000
+end
+classinstancecanvas 128168 classinstance_ref 128424 // automat
+  xyz 307 4 2000 life_line_z 2000
+end
+classinstancecanvas 128680 classinstance_ref 142120 // terminal
+  xyz 647 4 2000 life_line_z 2000
+end
+classinstancecanvas 129064 classinstance_ref 142248 // sysAutoryzacji
+  xyz 917 4 2005 life_line_z 2000
+end
+classinstancecanvas 129576 classinstance_ref 135336 // zakup
+  xyz 530 4 2000 life_line_z 2000
+end
+durationcanvas 128296 classinstance_ref 128040 // klient:Klient
+  xyzwh 81 81 2010 11 242
+end
+durationcanvas 128424 classinstance_ref 128168 // automat:Automat
+  xyzwh 348 66 2010 11 242
+end
+durationcanvas 129704 classinstance_ref 129576 // zakup:Zakup
+  xyzwh 561 97 2010 11 25
+end
+durationcanvas 129960 classinstance_ref 128680 // terminal:TerminalNaKarte
+  xyzwh 706 175 2010 11 89
+end
+durationcanvas 130216 classinstance_ref 129064 // sysAutoryzacji:SystemAutoryzacjiPlatnosci
+  xyzwh 1022 200 2010 11 25
+end
+msg 128552 synchronous
+  from durationcanvas_ref 128296
+  to durationcanvas_ref 128424
+  yz 82 2015 explicitmsg "1: wprowadzenieKarty()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "karta: KartaPlatnicza"
+  label_xy 112 67
+msg 129832 synchronous
+  from durationcanvas_ref 128424
+  to durationcanvas_ref 129704
+  yz 97 2015 explicitmsg "2.1: getSumaZakupu()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "p: platnosc"
+  label_xy 382 83
+msg 130088 synchronous
+  from durationcanvas_ref 128424
+  to durationcanvas_ref 129960
+  yz 185 2015 explicitmsg "2.2: obsluzPlatnoscKarta()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "suma: int, karta: KartaPlatnicza"
+  label_xy 396 171
+msg 130344 synchronous
+  from durationcanvas_ref 129960
+  to durationcanvas_ref 130216
+  yz 200 2020 explicitmsg "3: rozpocznijPlatnosc()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "suma: int, karta: KartaPlatnicza"
+  label_xy 748 186
+end

@@ -1,0 +1,63 @@
+co składa się na automat:
+system odmierzanie czasu
+rejestr produktów		(cena, pozycja, liczba)
+interfejs				(ekran, klawiatura)
+magazyn produktów got.	(drzwiczki z zamkiem, klapa, rzędy)
+magazyn produktów przyg.(grzałka, saszetki, taśma)
+schowek na gotówkę		(na monety, na banknoty)
+terminal na kartę		(czytnik, klawiatura)
+system dźwiękowy		(głośniki)
+system obsługi świateł	(światła)
+urządzenie rozpoznające monety i banknoty
+naklejka z instrukcją obsługi
+
+komunikat na ekranie
+-o awarii
+-wydanie produktu
+-o błędzie .......
+
+moneta
+banknot
+
+dane sprzedaży
+kopiowanie danych spzred. z aut. do anal.
+przesłanie danych sprzed. od anal. do kogoś
+autoryzacja
+zakup
+wybór produktu
+płatność
+-gotówką
+-kartą
+
+pin
+-do karty
+-produktu
+-do trybu autoryzowanego
+
+kwota do zapłaty
+pozycja w automacie
+kopia danych sprzedaży
+usterka
+zagrożenie życia
+protokół komunikacji z usługą
+
+tryb
+-zwykły
+-autoryzowany
+-awaryjny
+
+Klient
+Pracownik obsługi	
+Analityk
+Usługa od ekip serwisowych
+System autoryzacji płatności
+Właściciel automatu
+
+produkt
+-przygotowywany
+--ciepły napój
+--zupa
+-gotowy
+--w puszce
+--inne
+

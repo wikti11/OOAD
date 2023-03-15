@@ -1,0 +1,42 @@
+format 224
+
+classinstance 129035 class_ref 141195 // Analityk
+  name ""   xyz 48 113 2000 life_line_z 2000
+classinstance 129163 class_ref 141451 // AnalitykKontroler
+  name ""   xyz 209 119 2000 life_line_z 2000
+classinstance 129675 class_ref 148235 // KopiaDanychSprzedazy
+  name ""   xyz 496 189 2000 life_line_z 2000
+classinstance 130059 class_ref 141579 // SystemOdmierzaniaCzasu
+  name ""   xyz 414 125 2000 life_line_z 2000
+durationcanvas 129291 classinstance_ref 129035 // :Analityk
+  xyzwh 65 168 2010 11 93
+end
+durationcanvas 129419 classinstance_ref 129163 // :AnalitykKontroler
+  xyzwh 252 174 2010 11 140
+end
+durationcanvas 129803 classinstance_ref 129675 // :KopiaDanychSprzedazy
+  xyzwh 556 239 2010 11 83
+end
+durationcanvas 130187 classinstance_ref 130059 // :SystemOdmierzaniaCzasu
+  xyzwh 479 186 2010 11 25
+end
+msg 129547 synchronous
+  from durationcanvas_ref 129291
+  to durationcanvas_ref 129419
+  yz 175 2015 msg operation_ref 136843 // "wyborDanychSprzedazy()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 99 161
+msg 129931 synchronous
+  from durationcanvas_ref 129419
+  to durationcanvas_ref 129803
+  yz 248 2015 msg operation_ref 136971 // "utworzKopieDanychSprzedazy()"
+  stereotype "<<create>>" xyz 312 262 3000
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 267 234
+msg 130315 synchronous
+  from durationcanvas_ref 129419
+  to durationcanvas_ref 130187
+  yz 186 2015 msg operation_ref 130059 // "rozpocznijOdmierzacCzas()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 305 172
+end
